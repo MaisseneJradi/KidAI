@@ -1,0 +1,33 @@
+# Environnement
+.env
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Données (suivies par DVC à partir de l'étape 4, jamais par Git)
+data/raw/
+data/processed/
+data/cache/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Éditeurs / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
