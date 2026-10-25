@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+/* Palette et polices du cahier des charges (section 8.1). */
+@theme {
+  --color-ciel: #4fa3f7;
+  --color-ciel-fonce: #2b7fd4;
+  --color-soleil: #ffc93c;
+  --color-menthe: #3dd6a3;
+  --color-corail: #ff7a6b;
+  --color-creme: #fff8ec;
+  --color-encre: #24324a;
+  --font-sans: "Fredoka", "Baloo Bhaijaan 2", system-ui, sans-serif;
+}
+
+html {
+  font-size: 17px;
+}
+html[lang="ar"] {
+  --font-sans: "Baloo Bhaijaan 2", "Fredoka", system-ui, sans-serif;
+}
+
+/* Thèmes par âge : plus gros et plus rond pour les petits, plus sobre pour les ados. */
+html[data-band="small"] {
+  font-size: 19px;
+  --radius-bulle: 1.75rem;
+}
+html[data-band="middle"] {
+  font-size: 17px;
+  --radius-bulle: 1.5rem;
+}
+html[data-band="teen"] {
+  font-size: 16px;
+  --radius-bulle: 1rem;
+}
+
+/* Besoins d'adaptation renseignés par le parent. */
+html[data-needs~="deficience_visuelle"] {
+  font-size: 22px;
+}
+html[data-needs~="dyslexie"] body {
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+  line-height: 1.75;
+}
+
+body {
+  background: var(--color-creme);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-ciel-fonce);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

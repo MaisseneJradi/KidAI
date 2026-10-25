@@ -1,25 +1,56 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import { useChildren } from "./api/hooks";
+import { ChildLayout } from "./components/ChildLayout";
+import { applyLanguage } from "./i18n";
+import { bandForAge } from "./lib/ageBand";
+import Accueil from "./pages/Accueil";
+import Badges from "./pages/Badges";
+import Chat from "./pages/Chat";
+import Connexion from "./pages/Connexion";
+import Decouvertes from "./pages/Decouvertes";
+import Parent from "./pages/Parent";
+import Reglages from "./pages/Reglages";
+import { useAppStore } from "./store/useAppStore";
 
-type Status = "loading" | "ok" | "error";
+/** Applique la langue (et le RTL), le thème d'âge et les besoins d'adaptation à toute la page. */
+function useGlobalAppearance() {
+  const lang = useAppStore((s) => s.lang);
+  const theme = useAppStore((s) => s.theme);
+  const childId = useAppStore((s) => s.currentChildId);
+  const child = useChildren().data?.find((c) => c.id === childId);
+  const age = child?.age;
+  const needs = child?.needs.join(" ") ?? "";
 
-// Page provisoire de l'étape 0 : remplacée par la vraie interface à l'étape 1.
-export default function App() {
-  const [status, setStatus] = useState<Status>("loading");
+  useEffect(() => applyLanguage(lang), [lang]);
 
   useEffect(() => {
-    fetch("/health")
-      .then((res) => setStatus(res.ok ? "ok" : "error"))
-      .catch(() => setStatus("error"));
-  }, []);
+    const band = theme !== "auto" ? theme : age !== undefined ? bandForAge(age) : "middle";
+    document.documentElement.dataset.band = band;
+  }, [theme, age]);
+
+  useEffect(() => {
+    document.documentElement.dataset.needs = needs;
+  }, [needs]);
+}
+
+export default function App() {
+  useGlobalAppearance();
+  const token = useAppStore((s) => s.token);
+
+  if (!token) return <Connexion />;
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-amber-50 text-slate-800">
-      <h1 className="text-5xl font-bold">KidAI</h1>
-      <p role="status" className="text-xl">
-        {status === "loading" && "…"}
-        {status === "ok" && "backend OK"}
-        {status === "error" && "backend indisponible"}
-      </p>
-    </main>
+    <Routes>
+      <Route path="/" element={<Accueil />} />
+      <Route path="/parent" element={<Parent />} />
+      <Route element={<ChildLayout />}>
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/decouvertes" element={<Decouvertes />} />
+        <Route path="/badges" element={<Badges />} />
+        <Route path="/reglages" element={<Reglages />} />
+      </Route>
+      <Route path="*" element={<Accueil />} />
+    </Routes>
   );
 }
