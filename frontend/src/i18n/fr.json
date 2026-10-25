@@ -1,0 +1,193 @@
+{
+  "app": { "name": "KidAI" },
+  "common": { "loading": "Chargement…", "back": "Retour" },
+  "chaty": { "label": "Chaty, le petit hibou-robot" },
+  "languages": { "fr": "Français", "ar": "العربية" },
+  "age_one": "{{count}} an",
+  "age_other": "{{count}} ans",
+  "grades": {
+    "1e_annee": "1re année",
+    "2e_annee": "2e année",
+    "3e_annee": "3e année",
+    "4e_annee": "4e année",
+    "5e_annee": "5e année",
+    "6e_annee": "6e année",
+    "7e_annee": "7e année",
+    "8e_annee": "8e année",
+    "9e_annee": "9e année"
+  },
+  "home": {
+    "title": "Qui es-tu ?",
+    "subtitle": "Choisis ton profil pour parler avec Chaty",
+    "empty": "Aucun profil pour l'instant. Demande à un parent d'en créer un.",
+    "parent": "Espace parent"
+  },
+  "nav": {
+    "label": "Navigation principale",
+    "chat": "Discuter",
+    "discoveries": "Découvertes",
+    "badges": "Badges",
+    "settings": "Réglages",
+    "switchProfile": "Changer de profil"
+  },
+  "chat": {
+    "greeting": "Bonjour {{name}} ! Je suis Chaty, une intelligence artificielle. Pose-moi toutes tes questions !",
+    "placeholder": "Écris ta question…",
+    "inputLabel": "Ta question pour Chaty",
+    "send": "Envoyer",
+    "thinking": "Chaty réfléchit…",
+    "simpler": "Explique plus simplement",
+    "imageLoading": "Chaty dessine…",
+    "imageAlt": "Illustration de la réponse de Chaty",
+    "source": "D'après ta leçon : {{book}} — {{chapter}}",
+    "gentleHint": "Tu peux montrer ce message à un adulte de confiance.",
+    "error": "Oups, Chaty n'a pas pu répondre. Réessaie !",
+    "suggestionsTitle": "Idées de questions",
+    "suggestions": [
+      "Pourquoi le ciel est bleu ?",
+      "Pourquoi les volcans explosent ?",
+      "C'est quoi une étoile ?",
+      "Comment marche mon cœur ?"
+    ]
+  },
+  "topics": {
+    "sciences": "Sciences",
+    "espace": "Espace",
+    "animaux": "Animaux",
+    "histoire": "Histoire",
+    "corps": "Corps humain",
+    "autre": "Curiosités"
+  },
+  "discoveries": {
+    "title": "Mes découvertes",
+    "empty": "Pose ta première question à Chaty pour remplir ton carnet !"
+  },
+  "badges": {
+    "title": "Mes badges",
+    "intro": "Chaque question te fait découvrir quelque chose. Pas de course, juste le plaisir d'apprendre !",
+    "stars_one": "{{count}} étoile de curiosité",
+    "stars_other": "{{count}} étoiles de curiosité",
+    "locked": "Pas encore",
+    "unlocked": "Gagné !",
+    "items": {
+      "first": { "name": "Première question", "desc": "Tu as posé ta première question." },
+      "curious": { "name": "Grand curieux", "desc": "5 questions posées." },
+      "scientist": { "name": "Petit scientifique", "desc": "3 questions de sciences." },
+      "astronaut": { "name": "Astronaute", "desc": "2 questions sur l'espace." },
+      "naturalist": { "name": "Ami des animaux", "desc": "2 questions sur les animaux." },
+      "body": { "name": "Docteur en herbe", "desc": "2 questions sur le corps humain." }
+    }
+  },
+  "settings": {
+    "title": "Réglages",
+    "language": "Langue",
+    "sounds": "Sons",
+    "soundsHint": "Un petit son quand Chaty répond",
+    "theme": "Thème",
+    "themes": {
+      "auto": "Selon l'âge",
+      "small": "Explorateur (6–8 ans)",
+      "middle": "Aventurier (9–11 ans)",
+      "teen": "Découvreur (12–14 ans)"
+    },
+    "parent": "Espace parent"
+  },
+  "interests": {
+    "sciences": "Sciences",
+    "espace": "Espace",
+    "animaux": "Animaux",
+    "histoire": "Histoire",
+    "corps": "Corps humain",
+    "sport": "Sport",
+    "musique": "Musique",
+    "art": "Art et dessin"
+  },
+  "auth": {
+    "title": "Bienvenue sur KidAI",
+    "subtitle": "Espace réservé aux parents. Créez un compte pour configurer les profils de vos enfants.",
+    "login": "Se connecter",
+    "register": "Créer un compte",
+    "email": "Email",
+    "password": "Mot de passe",
+    "passwordHint": "8 caractères minimum",
+    "pin": "Code PIN de l'espace parent (4 chiffres)",
+    "pinHelp": "Il protège vos réglages contre les petits curieux.",
+    "toRegister": "Pas encore de compte ? Créer un compte",
+    "toLogin": "Déjà un compte ? Se connecter",
+    "errorLogin": "Email ou mot de passe incorrect.",
+    "errorExists": "Un compte existe déjà avec cet email.",
+    "errorInvalid": "Vérifiez l'email, le mot de passe (8 caractères minimum) et le PIN (4 chiffres).",
+    "errorGeneric": "Une erreur est survenue. Réessayez.",
+    "demoHint": "Mode démo : n'importe quel email et mot de passe fonctionnent."
+  },
+  "parent": {
+    "title": "Espace parent",
+    "logout": "Se déconnecter",
+    "birthDate": "Date de naissance",
+    "sex": "Sexe",
+    "sexes": {
+      "fille": "Fille",
+      "garcon": "Garçon",
+      "non_precise": "Ne pas préciser"
+    },
+    "sexHelp": "Permet à Chaty d'accorder correctement ses phrases (surtout en arabe).",
+    "interests": "Centres d'intérêt",
+    "interestsHelp": "Pour proposer des idées de questions qui lui plaisent.",
+    "needs": "Besoins d'adaptation",
+    "needsHelp": "L'affichage et les réponses de Chaty s'adaptent. Ces informations sont chiffrées et ne sont jamais montrées à l'enfant.",
+    "needsList": {
+      "dyslexie": { "name": "Dyslexie", "desc": "texte plus espacé, réponses plus courtes" },
+      "deficience_visuelle": { "name": "Déficience visuelle", "desc": "texte plus grand" },
+      "attention": { "name": "Difficultés d'attention", "desc": "réponses plus courtes" },
+      "deficience_auditive": {
+        "name": "Déficience auditive",
+        "desc": "aucune information transmise seulement par le son"
+      }
+    },
+    "saveError": "Vérifiez les informations : l'enfant doit avoir entre 6 et 14 ans.",
+    "pinPrompt": "Entrez votre code PIN",
+    "pinHint": "Code de démonstration : 1234",
+    "pinError": "Code incorrect, réessayez.",
+    "pinDigit": "Chiffre {{digit}}",
+    "erase": "Effacer",
+    "lock": "Verrouiller",
+    "alerts": "Alertes",
+    "noAlerts": "Aucune alerte.",
+    "alertText": "{{name}} a demandé : « {{question}} ». Chaty lui a conseillé d'en parler à un adulte.",
+    "children": "Profils des enfants",
+    "addChild": "Ajouter un enfant",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "remove": "Supprimer",
+    "confirmRemoveChild": "Supprimer le profil de {{name}} ?",
+    "firstName": "Prénom",
+    "age": "Âge",
+    "grade": "Niveau scolaire",
+    "lang": "Langue",
+    "avatar": "Avatar",
+    "caution": "Niveau de prudence",
+    "cautionLevels": { "standard": "Standard", "renforce": "Renforcé" },
+    "summary": "Résumé d'activité",
+    "child": "Enfant",
+    "totalQuestions": "Questions posées",
+    "byTopic": "Sujets",
+    "byAction": "Réactions de Chaty",
+    "actions": {
+      "ALLOW": "Réponse normale",
+      "REWRITE": "Réponse adoucie",
+      "REDIRECT": "Sujet réorienté",
+      "ASK_ADULT": "Adulte conseillé",
+      "BLOCK": "Refus poli"
+    },
+    "recent": "Dernières réponses",
+    "noHistory": "Aucune question pour l'instant.",
+    "feedbackUp": "Bonne réponse",
+    "feedbackDown": "Réponse à améliorer",
+    "feedbackComment": "Commentaire (facultatif)",
+    "feedbackThanks": "Merci pour votre avis !",
+    "deleteData": "Supprimer l'historique de {{name}}",
+    "deleteConfirm": "Supprimer définitivement l'historique de {{name}} ?",
+    "deleted": "Historique supprimé."
+  }
+}

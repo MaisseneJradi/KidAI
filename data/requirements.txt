@@ -1,0 +1,7 @@
+# Scripts de données (téléchargement, préparation). Environnement : .venv à la racine du dépôt.
+requests==2.32.3
+# Vérifie les certificats TLS avec le magasin du système (cnp.com.tn n'envoie pas son
+# certificat intermédiaire : le bundle certifi de requests échoue, Windows/macOS réussissent).
+truststore==0.10.0
+pypdf==5.1.0
+pytest==8.3.4

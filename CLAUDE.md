@@ -18,6 +18,8 @@ Spécification complète : docs/CAHIER_DES_CHARGES.md — la lire avant toute t�
   (venv Python 3.11 pour le backend, npm pour le frontend). Pour les services du cahier,
   préférer des variantes locales/embarquées (Qdrant en mode local, MLflow avec stockage fichier,
   tâches de fond FastAPI à la place de RabbitMQ tant que c'est suffisant).
+- **La mascotte s'appelle Chaty** (شاتي en arabe), et non Nouri comme dans le cahier : petit
+  hibou-robot original. Utiliser « Chaty » partout (code, textes, prompts système de l'Annexe C).
 - **PostgreSQL 17** installé en local (service Windows `postgresql-x64-17`, port 5432),
   base `kidai`, utilisateur `kidai`. URL dans `.env` (`DATABASE_URL`).
 
@@ -31,7 +33,8 @@ RL : Gymnasium + Stable-Baselines3 ; MLOps : DVC, MLflow, GitLab CI, Prometheus,
 - Backend : cd backend ; .\.venv\Scripts\python -m uvicorn app.main:app --reload --port 8000
 - Frontend : cd frontend ; npm run dev   (http://localhost:5173)
 - Tests backend : cd backend ; .\.venv\Scripts\python -m pytest
-- Tests frontend : cd frontend ; npm test
+- Tests frontend : cd frontend ; npm test ; npm run test:e2e
+- Frontend en mode démo (MSW, sans backend) par défaut ; VITE_USE_MOCKS=false pour l'API réelle
 - Pipeline données/entraînement : dvc repro
 
 ## Style

@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api import auth, children
 from app.core.config import settings
 from app.db import session
 
-app = FastAPI(title="KidAI API", version="0.1.0")
+app = FastAPI(title="KidAI API", version="0.2.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -12,6 +13,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(auth.router)
+app.include_router(children.router)
 
 
 @app.get("/health")
