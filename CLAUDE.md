@@ -30,6 +30,8 @@ IA : Ollama (qwen3), Qwen3Guard (mode strict), ShieldGemma 2, FLUX.1-schnell/SD-
 RL : Gymnasium + Stable-Baselines3 ; MLOps : DVC, MLflow, GitLab CI, Prometheus, Grafana, Loki
 
 ## Commandes (Windows / PowerShell)
+- Installation après un clone : powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
+- Tout lancer : powershell -ExecutionPolicy Bypass -File scripts\dev.ps1   (-Demo : API simulée)
 - Backend : cd backend ; .\.venv\Scripts\python -m uvicorn app.main:app --reload --port 8000
 - Frontend : cd frontend ; npm run dev   (http://localhost:5173)
 - Tests backend : cd backend ; .\.venv\Scripts\python -m pytest
