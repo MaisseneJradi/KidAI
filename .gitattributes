@@ -1,0 +1,14 @@
+# Fins de ligne LF dans le dépôt ET dans les copies de travail, quel que soit core.autocrlf :
+# sans cela, Git réécrit les fichiers en CRLF sous Windows et prettier refuse les commits.
+* text=auto eol=lf
+
+# Scripts Windows : CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binaires
+*.png binary
+*.jpg binary
+*.pdf binary
+*.woff2 binary

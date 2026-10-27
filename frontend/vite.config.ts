@@ -3,6 +3,12 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vitest/config";
 
+// Node ≥ 25 expose un localStorage natif qui masque celui de jsdom dans les tests. L'option qui le
+// désactive n'existe pas sur les Node plus anciens (20 LTS) : on ne la passe que si elle est connue.
+const webstorageFlag = process.allowedNodeEnvironmentFlags.has("--experimental-webstorage")
+  ? ["--no-experimental-webstorage"]
+  : [];
+
 export default defineConfig({
   plugins: [
     react(),
@@ -44,7 +50,6 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./tests/setup.ts"],
     include: ["tests/**/*.test.{ts,tsx}"],
-    // Node ≥ 25 expose un localStorage natif qui masque celui de jsdom.
-    poolOptions: { forks: { execArgv: ["--no-experimental-webstorage"] } },
+    poolOptions: { forks: { execArgv: webstorageFlag } },
   },
 });
