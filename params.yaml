@@ -1,0 +1,33 @@
+# Paramètres du pipeline de données (étape 4). Lu par data/prep et suivi par DVC :
+# modifier une valeur puis lancer « dvc repro » ne refait que les étapes concernées.
+seed: 42
+
+sources:
+  # OR-Bench est très grand et pensé pour des adultes : on en prend un échantillon.
+  orbench_hard_n: 500 # « semblent dangereuses mais inoffensives » -> borderline
+  orbench_toxic_n: 300 # vraiment toxiques -> unsafe
+
+translate:
+  # Dans nos essais : qwen3:4b (tient dans 4 Go de VRAM) traduit bien le français ;
+  # llama3.1:8b fait nettement moins de fautes en arabe, mais il est plus lent.
+  models:
+    fr: qwen3:4b
+    ar: llama3.1:8b
+  # Sur 4 Go de VRAM, Ollama garde trop de couches sur le processeur par défaut. Mesuré : un lot
+  # de 8 questions passe de 40 s à 25 s avec 24 couches sur le GPU (à baisser si « out of memory »).
+  ollama_options:
+    llama3.1:8b: {num_gpu: 24}
+  langs: [fr, ar] # derja : pas de traduction automatique (qualité insuffisante en local)
+  # Mesuré en arabe sur 64 questions : un lot sur deux recopie l'anglais et doit être refait.
+  # Taille 1 : 10,5 questions/min et 61 valides, contre 9,2 et 58 avec des lots de 8.
+  batch_size: 1
+
+synthetic:
+  model: llama3.1:8b
+  langs: [fr] # générées en français, puis traduites (l'arabe généré directement est bancal)
+  translate_to: [ar] # avec les modèles de « translate »
+  per_cell: 8 # questions par (sujet, tranche d'âge)
+
+build:
+  test_questions: 120 # questions de base du jeu de test, chacune à 2 âges (6-8 et 12-14)
+  val_fraction: 0.1

@@ -17,10 +17,13 @@ coverage/
 playwright-report/
 test-results/
 
-# Données (suivies par DVC à partir de l'étape 4, jamais par Git)
+# Données. Dans Git : dataset produit, caches du LLM (des jours de calcul), annotations.
+# Hors Git : données brutes (python data/download.py), manuels CNP et index Qdrant (sous droits,
+# jamais redistribués : data/download_cnp.py puis python -m rag.ingest).
 data/raw/
-data/processed/
-data/cache/
+data/processed/cnp/
+data/qdrant/
+data/cache/*.log
 
 # MLflow
 mlruns/
