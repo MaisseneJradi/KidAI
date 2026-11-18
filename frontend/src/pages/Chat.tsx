@@ -5,7 +5,7 @@ import { useChildren, useImage, useSendMessage, useSimplify } from "../api/hooks
 import { ANSWER_ACTIONS, type MessageResponse } from "../api/types";
 import { Bubble } from "../components/Bubble";
 import { Button } from "../components/Button";
-import { Chaty, type ChatyMood } from "../components/Chaty";
+import { Kotty, type KottyMood } from "../components/Kotty";
 import { playPop } from "../lib/sound";
 import { useAppStore } from "../store/useAppStore";
 
@@ -14,7 +14,7 @@ interface Exchange {
   response: MessageResponse;
 }
 
-function moodFor(pending: boolean, last?: MessageResponse): ChatyMood {
+function moodFor(pending: boolean, last?: MessageResponse): KottyMood {
   if (pending) return "think";
   if (!last) return "wave";
   return ANSWER_ACTIONS.includes(last.action) ? "wonder" : "reassure";
@@ -47,7 +47,7 @@ function ThinkingBubble() {
   const { t } = useTranslation();
   const reduce = useReducedMotion();
   return (
-    <Bubble from="chaty">
+    <Bubble from="kotty">
       <span role="status" className="flex items-center gap-2">
         {t("chat.thinking")}
         <span aria-hidden="true" className="flex gap-1">
@@ -113,11 +113,11 @@ export default function Chat() {
   return (
     <div className="flex flex-1 flex-col gap-4">
       <div className="flex justify-center">
-        <Chaty mood={moodFor(pending, last)} size={110} />
+        <Kotty mood={moodFor(pending, last)} size={110} />
       </div>
 
       <div className="flex flex-col gap-3" aria-live="polite">
-        <Bubble from="chaty">{t("chat.greeting", { name: child?.first_name ?? "" })}</Bubble>
+        <Bubble from="kotty">{t("chat.greeting", { name: child?.first_name ?? "" })}</Bubble>
 
         {exchanges.map((ex, i) => {
           const answered = ANSWER_ACTIONS.includes(ex.response.action);
@@ -125,7 +125,7 @@ export default function Chat() {
           return (
             <div key={`${ex.response.message_id}-${i}`} className="flex flex-col gap-3">
               <Bubble from="child">{ex.question}</Bubble>
-              <Bubble from={answered ? "chaty" : "gentle"}>
+              <Bubble from={answered ? "kotty" : "gentle"}>
                 <p>{ex.response.text}</p>
                 {!answered && (
                   <p className="mt-2 text-sm font-semibold">💛 {t("chat.gentleHint")}</p>

@@ -44,7 +44,6 @@ export interface Child {
   age: number;
   sex: Sex;
   grade: string;
-  lang: Lang;
   caution_level: CautionLevel;
   interests: Interest[];
   needs: Need[];

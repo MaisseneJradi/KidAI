@@ -1,0 +1,11 @@
+{
+  "lignes": 20911,
+  "questions_de_base": 2243,
+  "lignes_train": 18621,
+  "lignes_val": 2073,
+  "lignes_test": 217,
+  "test_annote": 0,
+  "test_total": 217,
+  "kappa": null,
+  "traductions_relues": 0
+}

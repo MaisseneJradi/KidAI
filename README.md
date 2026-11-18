@@ -86,11 +86,11 @@ npm run dev
 Ouvrir http://localhost:5173.
 
 **Mode démo (par défaut)** : le frontend tourne seul, l'API de la section 14 est simulée par
-MSW (n'importe quel email / mot de passe ; profils fictifs Yasmine 7 ans, Adam 10 ans en arabe,
+MSW (n'importe quel email / mot de passe ; profils fictifs Yasmine 7 ans, Adam 10 ans,
 Lina 13 ans ; PIN parent `1234`).
 Questions de démonstration pour les 5 actions :
 
-| Question | Réaction de Chaty |
+| Question | Réaction de Kotty |
 |---|---|
 | Pourquoi les volcans explosent ? | réponse + illustration (ALLOW) |
 | Pourquoi il y a la guerre ? | réponse adoucie (REWRITE) |
@@ -100,7 +100,7 @@ Questions de démonstration pour les 5 actions :
 
 **Avec le vrai backend** : créer `frontend/.env.local` contenant `VITE_USE_MOCKS=false`, puis
 relancer `npm run dev`. Le parent crée son compte (email, mot de passe, PIN à 4 chiffres) et
-ajoute ses enfants dans l'espace parent : prénom, date de naissance, sexe, niveau, langue,
+ajoute ses enfants dans l'espace parent : prénom, date de naissance, sexe, niveau,
 centres d'intérêt et besoins d'adaptation. Ces données sont enregistrées dans PostgreSQL ; la
 date de naissance et les besoins y sont chiffrés.
 `http://localhost:8000/health` renvoie `{"status":"ok","database":"ok"}`.
@@ -125,6 +125,35 @@ jamais commités (`data/raw/` est ignoré par Git) :
 
 Résultat dans `data/raw/cnp/` : `{niveau}/{matiere}/{categorie}/{titre} ({code}).pdf`,
 `manifest.json` (URL, SHA-256, taille, date, échecs) et `catalogue.csv`.
+
+### Dataset KidAI (étape 4)
+
+Datasets D1-D6, normalisation, traduction FR / AR (Ollama local), questions synthétiques,
+âges et splits sans fuite, versionnés par DVC (détails : [data/README.md](data/README.md)) :
+
+```powershell
+ollama pull qwen3:4b; ollama pull llama3.1:8b
+.\.venv\Scripts\Activate.ps1    # les étapes DVC appellent « python » : celui du .venv
+dvc repro                       # reconstruit data/processed/kidai_dataset.parquet
+python data\prepare.py annotate # feuilles d'annotation du test + kappa
+```
+
+Le dataset produit et le cache des traductions sont dans Git : après un `git pull`,
+`data/processed/kidai_dataset.parquet` est prêt, sans Ollama. Pour relancer `dvc repro`,
+récupérer d'abord les données brutes (`python data\download.py`) ; les traductions déjà faites
+ne sont pas refaites.
+L'annotation du jeu de test se fait à la main : voir
+[data/annotation/README.md](data/annotation/README.md).
+
+## RAG (manuels CNP)
+
+Extraction (OCR), découpage par leçon, embeddings bge-m3 et index Qdrant local :
+voir [rag/README.md](rag/README.md).
+
+```powershell
+.\.venv\Scripts\python -m rag.ingest                                   # construire l'index
+.\.venv\Scripts\python -m rag.search "كيف أحمي عيني؟" --niveau 5       # chercher
+```
 
 ## Tests et qualité
 
@@ -157,8 +186,10 @@ les migrations, relancer `scripts\setup.ps1`.
 
 ```
 scripts/    setup.ps1 (installation), dev.ps1 (lancement)
+rag/        RAG sur les manuels CNP (extract, chunk, index, search)
 backend/    FastAPI (app/, tests/)
 frontend/   React + Vite + TS + Tailwind (src/, tests/)
-data/raw/   datasets téléchargés (non versionnés par Git, DVC à l'étape 4)
+data/       download.py, prepare.py + prep/ ; processed/, cache/, annotation/ (commités)
+data/raw/   datasets téléchargés (non versionnés par Git ; empreintes dans dvc.lock)
 docs/       cahier des charges
 ```

@@ -5,7 +5,7 @@ import { renderApp } from "./utils";
 
 async function ask(question: string) {
   const user = userEvent.setup();
-  await user.type(await screen.findByLabelText("Ta question pour Chaty"), question);
+  await user.type(await screen.findByLabelText("Ta question pour Kotty"), question);
   await user.click(screen.getByRole("button", { name: "Envoyer" }));
 }
 
@@ -19,13 +19,13 @@ describe("parcours enfant", () => {
 
     await ask("Pourquoi les volcans explosent ?");
 
-    expect(await screen.findByText(/Chaty réfléchit/)).toBeInTheDocument();
+    expect(await screen.findByText(/Kotty réfléchit/)).toBeInTheDocument();
     expect(
       await screen.findByText(/montagne qui a très chaud/, {}, { timeout: 3000 }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /Chaty/ })).toHaveAttribute("data-mood", "wonder");
+    expect(screen.getByRole("img", { name: /Kotty/ })).toHaveAttribute("data-mood", "wonder");
     expect(screen.getByRole("button", { name: /Explique plus simplement/ })).toBeInTheDocument();
-    expect(screen.getByText(/Chaty dessine/)).toBeInTheDocument();
+    expect(screen.getByText(/Kotty dessine/)).toBeInTheDocument();
     // L'action technique n'est jamais affichée à l'enfant.
     expect(screen.queryByText("ALLOW")).not.toBeInTheDocument();
   });
@@ -43,11 +43,11 @@ describe("parcours enfant", () => {
       { timeout: 3000 },
     );
     expect(reply).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /Chaty/ })).toHaveAttribute("data-mood", "reassure");
+    expect(screen.getByRole("img", { name: /Kotty/ })).toHaveAttribute("data-mood", "reassure");
     expect(
       screen.queryByRole("button", { name: /Explique plus simplement/ }),
     ).not.toBeInTheDocument();
-    expect(screen.queryByText(/Chaty dessine/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Kotty dessine/)).not.toBeInTheDocument();
   });
 
   it("« Explique plus simplement » renvoie une version plus courte", async () => {

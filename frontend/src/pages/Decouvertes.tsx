@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "../api/hooks";
 import { TOPICS, type HistoryItem, type Topic } from "../api/types";
 import { Card } from "../components/Card";
-import { Chaty } from "../components/Chaty";
+import { Kotty } from "../components/Kotty";
 import { TOPIC_ICONS } from "../lib/badges";
 import { useAppStore } from "../store/useAppStore";
 
@@ -22,7 +22,7 @@ export default function Decouvertes() {
       {isLoading && <p>{t("common.loading")}</p>}
       {history?.length === 0 && (
         <div className="flex flex-col items-center gap-3 text-center">
-          <Chaty mood="wave" size={110} />
+          <Kotty mood="wave" size={110} />
           <p>{t("discoveries.empty")}</p>
         </div>
       )}

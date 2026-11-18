@@ -1,0 +1,13 @@
+# RAG sur les manuels CNP (étape 6). Environnement : .venv à la racine du dépôt.
+# Outils externes requis : Poppler (pdftotext, pdftoppm) et Tesseract 5 avec la langue « ara ».
+#
+# PyTorch s'installe À PART, depuis son propre index (avec CUDA pour un GPU NVIDIA) :
+#   .venv\Scripts\python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# (sans GPU NVIDIA : --index-url https://download.pytorch.org/whl/cpu)
+# torch >= 2.6 est obligatoire : transformers refuse de charger bge-m3 (.bin) avec une version
+# antérieure (faille CVE-2025-32434 de torch.load).
+# Si l'antivirus bloque l'installation (WinError 32), télécharger d'abord la roue :
+#   pip download torch==2.6.0 --index-url ... --no-deps -d <dossier>  puis  pip install <fichier>.whl
+-r ../data/requirements.txt
+sentence-transformers==3.3.1
+qdrant-client==1.12.1

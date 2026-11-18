@@ -7,7 +7,14 @@
 *.bat text eol=crlf
 *.cmd text eol=crlf
 
+# Données : octets conservés tels quels, sinon les empreintes de dvc.lock ne correspondent plus
+# après un clone et DVC relance des étapes pour rien.
+data/cache/** -text
+data/processed/** -text
+data/annotation/*.csv -text
+
 # Binaires
+*.parquet binary
 *.png binary
 *.jpg binary
 *.pdf binary

@@ -135,7 +135,7 @@ export const handlers = [
     if (!child) return notFound();
     const { question, lang } = (await request.json()) as { question: string; lang: Lang };
     const rule = classify(question);
-    await delay(500); // laisse le temps de voir « Chaty réfléchit… »
+    await delay(500); // laisse le temps de voir « Kotty réfléchit… »
 
     const message: StoredMessage = {
       message_id: nextId("msg"),

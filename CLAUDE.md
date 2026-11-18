@@ -18,8 +18,10 @@ Spécification complète : docs/CAHIER_DES_CHARGES.md — la lire avant toute t�
   (venv Python 3.11 pour le backend, npm pour le frontend). Pour les services du cahier,
   préférer des variantes locales/embarquées (Qdrant en mode local, MLflow avec stockage fichier,
   tâches de fond FastAPI à la place de RabbitMQ tant que c'est suffisant).
-- **La mascotte s'appelle Chaty** (شاتي en arabe), et non Nouri comme dans le cahier : petit
-  hibou-robot original. Utiliser « Chaty » partout (code, textes, prompts système de l'Annexe C).
+- **La mascotte s'appelle Kotty** (كوتي en arabe), et non Nouri comme dans le cahier : petit
+  hibou-robot original. Utiliser « Kotty » partout (code, textes, prompts système de l'Annexe C).
+- **Pas de langue dans le profil enfant** (ni `children.lang`, section 15, ni formulaire parent) :
+  la langue se choisit dans Réglages et s'applique à l'appareil.
 - **PostgreSQL 17** installé en local (service Windows `postgresql-x64-17`, port 5432),
   base `kidai`, utilisateur `kidai`. URL dans `.env` (`DATABASE_URL`).
 
@@ -37,7 +39,10 @@ RL : Gymnasium + Stable-Baselines3 ; MLOps : DVC, MLflow, GitLab CI, Prometheus,
 - Tests backend : cd backend ; .\.venv\Scripts\python -m pytest
 - Tests frontend : cd frontend ; npm test ; npm run test:e2e
 - Frontend en mode démo (MSW, sans backend) par défaut ; VITE_USE_MOCKS=false pour l'API réelle
-- Pipeline données/entraînement : dvc repro
+- RAG CNP (venv racine .venv) : .\.venv\Scripts\python -m rag.ingest ; tests : -m pytest rag\tests
+- Pipeline données/entraînement : .\.venv\Scripts\Activate.ps1 ; dvc repro (paramètres : params.yaml ; venv activé obligatoire, les étapes appellent « python »)
+- Dataset, une étape : .\.venv\Scripts\python data\prepare.py normalize|translate|synthetic|build|stats|annotate ; tests : -m pytest data\tests
+- Dataset : pas de derja traduite automatiquement (qualité insuffisante en local) ; derja = T-HSAB uniquement pour l'instant
 
 ## Style
 - Python : ruff + black, type hints partout.

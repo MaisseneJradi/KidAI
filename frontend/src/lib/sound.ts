@@ -1,4 +1,4 @@
-/** Petit « pop » doux joué quand Chaty répond (seulement si les sons sont activés). */
+/** Petit « pop » doux joué quand Kotty répond (seulement si les sons sont activés). */
 export function playPop() {
   try {
     const ctx = new AudioContext();

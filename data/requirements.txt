@@ -5,3 +5,12 @@ requests==2.32.3
 truststore==0.10.0
 pypdf==5.1.0
 pytest==8.3.4
+# Dataset KidAI (étape 4)
+pandas==2.2.3
+pyarrow==18.1.0
+openpyxl==3.1.5
+PyYAML==6.0.3
+huggingface_hub==0.36.2
+dvc==3.59.1
+# dvc 3.59 ne fonctionne pas avec pathspec 1.x (« cannot import name _DIR_MARK »)
+pathspec==0.12.1

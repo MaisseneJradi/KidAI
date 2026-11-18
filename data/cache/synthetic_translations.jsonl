@@ -1,0 +1,349 @@
+{"qid": "syn_00001", "lang": "ar", "src_hash": "196c99c87d20", "question": "ما هي النجوم؟ هل أخذوا من السماء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00002", "lang": "ar", "src_hash": "1cf2b0bf5cd6", "question": "لماذا تنتقل القمر بينما هي معلقة في السماء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00003", "lang": "ar", "src_hash": "9a87037db85d", "question": "هل الشمس حارة لأنها دائرية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00004", "lang": "ar", "src_hash": "85a0e393f1c1", "question": "ما هي الكواكب؟ هل هي كرات تطفو في الفضاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00005", "lang": "ar", "src_hash": "6347b99e9d89", "question": "لماذا لا نرى الأرض من السماء مثل ما نراه من القمر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00006", "lang": "ar", "src_hash": "d485dec9f76c", "question": "هل النجوم هي قطط صغيرة تضيء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00007", "lang": "ar", "src_hash": "d088c0dc5c18", "question": "إذا صرخت بحرارة في الفضاء، سوف يسمعني الكواكب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00008", "lang": "ar", "src_hash": "1a99d001c8de", "question": "هل هناك أشجار على القمر؟ وحيوانات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00009", "lang": "ar", "src_hash": "56fb3cae6af2", "question": "ما هي الليلة الزرقاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00010", "lang": "ar", "src_hash": "b4ac4ae67484", "question": "لماذا يضيء الشمس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00011", "lang": "ar", "src_hash": "f10832d06b40", "question": "هل الماء موجود على المريخ؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00012", "lang": "ar", "src_hash": "6985037adfc7", "question": "ما هو اللون الأحمر على القمر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00013", "lang": "ar", "src_hash": "8412ec54122d", "question": "لماذا تكون الكواكب مختلفة في ألوانها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00014", "lang": "ar", "src_hash": "5187d2c64850", "question": "هل الأرض تعود حقاً حول الشمس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00015", "lang": "ar", "src_hash": "939ea75e5d80", "question": "ماذا يحدث عندما يختفون النجوم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00016", "lang": "ar", "src_hash": "c50ff6ccc973", "question": "ما هي السحب على كوكب المشتري؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00017", "lang": "ar", "src_hash": "bcc2deea3483", "question": "ما هي الليل على كوكب المريخ؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00018", "lang": "ar", "src_hash": "cc2b40dcfc86", "question": "لماذا تسبب القمر في المد والجزر على الأرض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00019", "lang": "ar", "src_hash": "77c672a357a4", "question": "ماذا يحدث إذا نظرت إلى الأرض من بعيد مثل كرة صغيرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00020", "lang": "ar", "src_hash": "319702550723", "question": "لماذا تكون كوكب الزهرة حارًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00021", "lang": "ar", "src_hash": "e1b20da6c2ae", "question": "ما يعني أن نجم يمر بظل القمر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00022", "lang": "ar", "src_hash": "82e85db3d047", "question": "إذا كانت الأرض تدور حول نفسها، ما الذي يجعل الليل يقع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00023", "lang": "ar", "src_hash": "d1db91d22f69", "question": "ماذا يحدث على كوكب المريخ في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00024", "lang": "ar", "src_hash": "9b6bed7634ce", "question": "لماذا تأخرت الشمس في إرسال نورها إلى الأرض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00025", "lang": "ar", "src_hash": "98a202d6e879", "question": "هل يحب الحيوانات البحر مثلني؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00026", "lang": "ar", "src_hash": "8eb819927bef", "question": "لماذا يملكون القردة الأشعة الشمسية في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00027", "lang": "ar", "src_hash": "e70414346db3", "question": "ماذا يأكل الطيور في الخريف؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00028", "lang": "ar", "src_hash": "a12e0f34c1da", "question": "هل ينامون مثلّي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00029", "lang": "ar", "src_hash": "b9d047e7128a", "question": "هل الأسماك لها أرجل مثل القطط؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00030", "lang": "ar", "src_hash": "fe2e0b876272", "question": "هل القردة حكيمة مثل الكلاب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00031", "lang": "ar", "src_hash": "abc350adcefd", "question": "لماذا تتناول الحيتان كميات كبيرة من الطعام؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00032", "lang": "ar", "src_hash": "101fd0305ebf", "question": "هل يبني الحيوانات منازل لهم مثل الأرانب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00033", "lang": "ar", "src_hash": "8bb8ea67a43c", "question": "كيف ينامون القطط كل يوم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00034", "lang": "ar", "src_hash": "5b63bebbedc0", "question": "هل الحيوانات لها أحلام مثلنا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00035", "lang": "ar", "src_hash": "26e52b00bfee", "question": "لماذا يكون الأُسود لها أظافر كبيرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00036", "lang": "ar", "src_hash": "8798cdfa63af", "question": "هل يمكن للحيوانات أن تتكلم بعضها البعض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00037", "lang": "ar", "src_hash": "17399a1de46b", "question": "كيف يعرفن الدجاجات أين تجدون الطعام؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00038", "lang": "ar", "src_hash": "7cdd36e585f7", "question": "هل يمكن للفروس أن يروا الأشياء التي تحدث بعيدًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00039", "lang": "ar", "src_hash": "b79a7572792c", "question": "لماذا يفندون جلدهم كثيراً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00040", "lang": "ar", "src_hash": "03cce3f6d96b", "question": "هل يخاف الحيوانات من الماء مثل البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00041", "lang": "ar", "src_hash": "2d0f421e7ea3", "question": "هل تَأكل البَقريات نفس الأشياء التي تأكلها البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00042", "lang": "ar", "src_hash": "27815487cf33", "question": "لماذا يوجد لديهم الكلاب ذيل بينما لا يوجد لديهم القطط ذيل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00043", "lang": "ar", "src_hash": "11f78dee9a53", "question": "كم وقت يبقى صغير الأرنب الأسود مع أمه قبل أن يذهبوا لوحدي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00044", "lang": "ar", "src_hash": "e01949853966", "question": "هل الطيور تأكل دائماً البذور أو تأكلها من الحشرات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00045", "lang": "ar", "src_hash": "23b95f184e07", "question": "هل يمكن للثعبان أن يتعلم السباحة مثل الأسماك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00046", "lang": "ar", "src_hash": "12a263ab29d8", "question": "هل يمكن للفأر أن ينام على قوائمه مثل الحصان؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00047", "lang": "ar", "src_hash": "59d3bb93e1e3", "question": "هل يشعرون الحيوانات بالتعب مثل البشر عندما يفعلون الرياضة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00048", "lang": "ar", "src_hash": "fa9b3955594d", "question": "هل يلعبون مع بعض مثلنا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00049", "lang": "ar", "src_hash": "4d28e2df7ff3", "question": "لماذا تحتاج النباتات إلى الماء والشمس لتحقيق النمو؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00050", "lang": "ar", "src_hash": "1afdd16af827", "question": "ماذا أفعل لترفيع صحة شجرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00051", "lang": "ar", "src_hash": "fa3b5d4e74ef", "question": "هل هناك أمواج حمراء أو أزرق في البحر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00052", "lang": "ar", "src_hash": "848c47bf402e", "question": "لماذا يحب الماعز أن يخربوا الجبال بقدامهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00053", "lang": "ar", "src_hash": "b45c68347bd0", "question": "هل يمكن للشجرة أن تتكلم أو هل أصوات الشجرة فقط في أحلامي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00054", "lang": "ar", "src_hash": "5f9a37ae984d", "question": "لماذا يكون السمك بلون أزرق أو أخضر، هل لأنهم أكلوا الخضروات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00055", "lang": "ar", "src_hash": "c43af8c6e523", "question": "أي الحيوانات التي تعيش في الصخور في الجبل، هل هم مجنونون؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00056", "lang": "ar", "src_hash": "c8ad7cf56eb3", "question": "لماذا لها جذور تحت الأرض؟ هل هي قليله من الموت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00057", "lang": "ar", "src_hash": "66f89fd18556", "question": "لماذا يوجد للنباتات أوراق حتى لو لم تكن مفيدة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00058", "lang": "ar", "src_hash": "93bd82467f7e", "question": "كيف ينمو الأشجار بسرعة كبيرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00059", "lang": "ar", "src_hash": "77ec8bf1f405", "question": "لماذا تكون البحار بلون الأزرق وليس الأخضر مثل الحدائق؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00060", "lang": "ar", "src_hash": "b7baafa45c13", "question": "ما الذي يجعل الأشجار تتحرك في الريح؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00061", "lang": "ar", "src_hash": "b41c0c82e9bf", "question": "هل يمكنك أن تظهر لي نباتًا يحتوي على جذور تحت الأرض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00062", "lang": "ar", "src_hash": "60fb51bdbb83", "question": "لماذا تكون الجبال عالية جدًا حتى لا يمكن للناس أن يذهبوا إليها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00063", "lang": "ar", "src_hash": "42ed99be09aa", "question": "هل الأصابيع تأكل النباتات تحت الماء أم لا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00064", "lang": "ar", "src_hash": "187c20e786b4", "question": "هل يوجد نباتات على القمر التي يمكن أن تنمو إذا زرعنا فيها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00065", "lang": "ar", "src_hash": "275eb8777a3f", "question": "لماذا تغير لون أوراق الأشجار في فصل الخريف؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00066", "lang": "ar", "src_hash": "3517049d7fe6", "question": "لماذا تُكبر النباتات في بعض الأماكن أسرع من أخرى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00067", "lang": "ar", "src_hash": "4d2befbe7748", "question": "هل الجبال من الجليد أم من الحجر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00068", "lang": "ar", "src_hash": "a61fca09313e", "question": "لماذا تكون الموجات البحرية حمراء في بعض الأحيان وزرقاء في أخرى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00069", "lang": "ar", "src_hash": "42561a5077b8", "question": "هل يمكن للنباتات أن تعلمن مثل ما نتعلمه في المدرسة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00070", "lang": "ar", "src_hash": "55eb3afec6ee", "question": "أيهما أكبر شجرة في العالم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00071", "lang": "ar", "src_hash": "1395b59ef866", "question": "هل يفقد الجليد الحيوانات التي تعيش في الجبال؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00072", "lang": "ar", "src_hash": "a9869b4cecb4", "question": "لماذا تختفي الزهور في نهاية الصيف؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00073", "lang": "ar", "src_hash": "7b5df145b9b7", "question": "لماذا يهطل المطر دائماً في نفس المكان كل مرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00074", "lang": "ar", "src_hash": "cf0d9f00997e", "question": "هل الرياح متعبة عندما تسحب بجدية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00075", "lang": "ar", "src_hash": "07423b052d66", "question": "هل هناك زهور في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00076", "lang": "ar", "src_hash": "29d82d5a4d32", "question": "لماذا يكون الصيف حارًا و الشتاء باردًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00077", "lang": "ar", "src_hash": "27fc38d2b448", "question": "هل السحاب حيوان يطير في السماء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00078", "lang": "ar", "src_hash": "0a58f395b114", "question": "لماذا لا يقع المطر دائماً علىّ؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00079", "lang": "ar", "src_hash": "a6939c979ab2", "question": "كم يعرف الشمس أين يجب أن يغيب كل ليلة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00080", "lang": "ar", "src_hash": "e1b2bcc49f0d", "question": "هل الجبال عالية جدًا للغاية حتى لا يمكن للغيوم أن تصل إليها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00081", "lang": "ar", "src_hash": "1727337f3336", "question": "لماذا يهطل المطر دائما في نفس اليوم في الأسبوع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00082", "lang": "ar", "src_hash": "fd19c0f263c6", "question": "ما هي اللمس على الوجه؟ هل هي سيئة للشجر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00083", "lang": "ar", "src_hash": "6260a90dc18b", "question": "لماذا لا ي蒽 الماء في البحر عندما يكون الجو حاراً؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00084", "lang": "ar", "src_hash": "61715f0f7345", "question": "هل هناك بلدان لا يهطل فيها المطر أبداً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00085", "lang": "ar", "src_hash": "657b020eceff", "question": "لماذا يكون الشتاء أكثر برودة في الجبال؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00086", "lang": "ar", "src_hash": "a490fe99c9d7", "question": "ما هي موسم الأمطار في قرتي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00087", "lang": "ar", "src_hash": "66e4d1074c4b", "question": "لماذا يكون الأغصان بيضاء عندما لا يهطل المطر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00088", "lang": "ar", "src_hash": "c124df9f85c5", "question": "هل هناك أماكن حيث الشمس تشرق دائماً حتى في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00089", "lang": "ar", "src_hash": "19dcd05dd070", "question": "لماذا لا تسقط المطر دائمًا على نفس الطريقة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00090", "lang": "ar", "src_hash": "ae61a48e8865", "question": "هل الرياح أقوى في الشتاء أم في الصيف؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00091", "lang": "ar", "src_hash": "baf5efe6c6a4", "question": "ماذا يفعل الشمس في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00092", "lang": "ar", "src_hash": "7213d05919b1", "question": "هل تختلف درجة الحرارة كثيرًا في يوم واحد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00093", "lang": "ar", "src_hash": "6e739f9cfbe9", "question": "لماذا تتغير الأيام في كل سنة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00094", "lang": "ar", "src_hash": "23a3cfff0c0e", "question": "ما هو المخدر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00095", "lang": "ar", "src_hash": "5ffc729e658a", "question": "لماذا يكون الأيام longer في الصيف من الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00096", "lang": "ar", "src_hash": "fc21334146ab", "question": "لماذا تشبه الأرض أحيانا البحر الكبير في الشتاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00097", "lang": "ar", "src_hash": "be5af9098338", "question": "لماذا يضطرب قلبي دائماً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00098", "lang": "ar", "src_hash": "08e755df9f90", "question": "ماذا يفعل مخي عندما أنام؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00099", "lang": "ar", "src_hash": "4a3f38dcd328", "question": "لماذا يجب أن أأكل الخضروات لكي أكون صحيًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00100", "lang": "ar", "src_hash": "9e7c069e504b", "question": "لماذا ينمو شعر أخي بسرعة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00101", "lang": "ar", "src_hash": "7af25043676f", "question": "لماذا أشعر بالجوع دائمًا بعد أن أكل?", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00102", "lang": "ar", "src_hash": "9131773eafb2", "question": "ما فائدة أظافر يدي?", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00103", "lang": "ar", "src_hash": "ed1d2b4c93ea", "question": "لماذا يجب أن أذهب إلى المدرسة كل يوم وليس كل الوقت ألعبة في الحديقة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00104", "lang": "ar", "src_hash": "271e3784d1b7", "question": "لماذا أحياناً أشعر بالحشرات في رجلي عندما أكون في الفصل الدراسي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00105", "lang": "ar", "src_hash": "e3eb9b7f759b", "question": "لماذا نملك عيونين إذا كان يمكننا الرؤية بالعين الواحدة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00106", "lang": "ar", "src_hash": "81d28b5cd4fb", "question": "ماذا يحدث عندما نتنفس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00107", "lang": "ar", "src_hash": "bccfc24e7092", "question": "لماذا يجب أن نأكلهم إذا أردنا أن نكون قويين؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00108", "lang": "ar", "src_hash": "a9249fcf1a97", "question": "كم يعمل الجهاز الهضمي، هو حقاً ممتع!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00109", "lang": "ar", "src_hash": "be5c790c8a40", "question": "أنا أرى الناس الذين ينامون في المترو، وأنا أسأل كيف يمكنهم النوم هناك.", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00110", "lang": "ar", "src_hash": "33015fca54db", "question": "هل الفيروسات غير مرئية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00111", "lang": "ar", "src_hash": "b61a3e3647f9", "question": "كيف نكون مثل الأسنان البيضاء للفلاش؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00112", "lang": "ar", "src_hash": "b9eff096ba86", "question": "هل الناس الذين يعانون من ألم دائمًا ما يستطيعون أن يشفوا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00113", "lang": "ar", "src_hash": "15f7a23ea879", "question": "ما هي الغدد اللعابية؟ وماذا تفعلون بها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00114", "lang": "ar", "src_hash": "4294b1c8b1b0", "question": "لماذا دائماً ما أكون جائع بعد أن أأكل المعكرونة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00115", "lang": "ar", "src_hash": "23b8852986db", "question": "ما هي الأنسجة في الجسم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00116", "lang": "ar", "src_hash": "0e89d7e79f18", "question": "كيف ينام الشخص إذا كان مكتئب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00117", "lang": "ar", "src_hash": "f184c0806034", "question": "أي الفواكه الصحيحة التي تساعد على بناء العضلات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00118", "lang": "ar", "src_hash": "42a8305cfec0", "question": "لماذا الناس يملكون الشعر في بعض الأماكن من جسمهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00119", "lang": "ar", "src_hash": "e1cd26db7459", "question": "كيف يعمل لكي يكون بطني يعمل جيدًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00120", "lang": "ar", "src_hash": "4c1914c51ed0", "question": "ما هو النوم العميق والماudit؟ وماذا يفعل في جسمي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00121", "lang": "ar", "src_hash": "bac8c7b2c671", "question": "كيف أعدّ إلى ألف؟ أريد أن أعرف إلى أين يمكنني أن أعدّ!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00122", "lang": "ar", "src_hash": "74dfc013df05", "question": "هل يمكننا أن نجد مربعًا وترياقًا في نفس الوقت على الأرض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00123", "lang": "ar", "src_hash": "a8534a2e97a1", "question": "ما وزن السكر الذي تملكه أمي؟ كانت أمي تمتلك 5 كيلو من السكر، ولكنها أعطت 2 كيلو منها. كم كيلو من السكر تملك أمي الآن؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00124", "lang": "ar", "src_hash": "92667a824215", "question": "أنا أرى أرقامًا تكرر في علب الشوفان. لماذا تختتم الأرقام دائمًا بالصفر أو الخمسة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00125", "lang": "ar", "src_hash": "889a62a78e7e", "question": "أيّ الألوان أكثر؟ أليس لديّ 4 ألعاب حمراء و 5 ألعاب أزرق و 3 ألعاب صفراء؟ كم ألعاب لديّ في مجموع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00126", "lang": "ar", "src_hash": "1bec66d74f40", "question": "إذا كان في حقيبة 15 عيشًا وتريد أن تعطيه 3 لاخي، كم يبقى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00127", "lang": "ar", "src_hash": "8fb1be1ccaf7", "question": "لماذا تبدأ الأرقام بالرقم 1 وليس 0؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00128", "lang": "ar", "src_hash": "f352cb41fcf6", "question": "أنا أملك لعبة مازة ب 24 قطعة، وأنا بحاجة إلى العثور على 12 قطعة متشابهة. كيف أتعرف عليها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00129", "lang": "ar", "src_hash": "d24c196d4170", "question": "هل هناك عدد يمكن أن لا يتم احتسابه؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00130", "lang": "ar", "src_hash": "451f34fe709c", "question": "لماذا يمكن للرقمين أن يأتيوا معًا مثل 10 و 20 و 30، وماذا يحدث بعد ذلك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00131", "lang": "ar", "src_hash": "75da9cc3384a", "question": "ما هو المربع إذا لم يكن دائرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00132", "lang": "ar", "src_hash": "1e8ad008a3b9", "question": "إذا كان لدي 3 كرات وآخرون يأخذون 2، كم كرات لدي الآن؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00133", "lang": "ar", "src_hash": "5ccf360a0aee", "question": "ما الفرق بين متر و سنتيمتر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00134", "lang": "ar", "src_hash": "d15fc642c52b", "question": "أستطيع إضافة 5 + 3، لكن إذا 混لطت الأرقام، أستطيع toujours العثور على الإجابة. لماذا؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00135", "lang": "ar", "src_hash": "377042b8d762", "question": "ما هو رقم أولي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00136", "lang": "ar", "src_hash": "1b2c37ae276a", "question": "هل يمكنني تبادل 5 يورو ب 5 قطع من 1 يورو؟ ولكن إذا أخذت 10 يورو، كيف يجب أن أتبادل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00137", "lang": "ar", "src_hash": "07ce6c63d09e", "question": "ما هو المربع؟ كيف نجد مساحته؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00138", "lang": "ar", "src_hash": "a5f16870627a", "question": "لا أفهم لماذا 2 ضرب 2 يساوي 4. هذا ليس كما يعمل!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00139", "lang": "ar", "src_hash": "fe182ba698d4", "question": "كم أنواع الشكل الهندسي التي يمكن أن يكون لها زوايا مستقيمة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00140", "lang": "ar", "src_hash": "596e5e4780af", "question": "كيف نحدد الوقت الذي يستغرق لقطع الدائرة حول الأرض في سيارة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00141", "lang": "ar", "src_hash": "c413eab6f666", "question": "لماذا لا يمكن أن يُقسم الأعداد الزوجية إلى أجزاء متساوية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00142", "lang": "ar", "src_hash": "0ba16d67b1b9", "question": "هل هناك أرقام لا تنتهي أبداً؟ مثل الصفر، يوقفها في النهاية.", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00143", "lang": "ar", "src_hash": "10c106b9330a", "question": "كيف نستطيع حل اللغز الذي في شكل piramide و فيه حروف؟ فيه ثلاثة حروف!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00144", "lang": "ar", "src_hash": "62d292ee9187", "question": "إذا قُسمتُ عددًا بنفسي، فإني متأكد من أني سأحصل على 1 ! هُوَ صحيح، أليس كذلك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00145", "lang": "ar", "src_hash": "7ed55d5f4e10", "question": "كيف بنوا القباب القديمة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00146", "lang": "ar", "src_hash": "e6fa404bcbe7", "question": "أول من كانوا يملكون السفن هم الفينيقيون؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00147", "lang": "ar", "src_hash": "6c538965f921", "question": "لماذا غزوا الرومان تونس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00148", "lang": "ar", "src_hash": "07bd92802e89", "question": "ما كانت القوات التي كانت في القديم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00149", "lang": "ar", "src_hash": "14620afb3bce", "question": "هل اعتقدوا أن الآلهة تعيش في الجبال؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00150", "lang": "ar", "src_hash": "5848f075536d", "question": "لماذا حارب الكارتاجنيون الروم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00151", "lang": "ar", "src_hash": "39807d17ecde", "question": "ما هو amphithéâtre؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00152", "lang": "ar", "src_hash": "c8856a93ebd6", "question": "هل كان الأجداد يملكون هاتفاً ليتكلموا به؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00153", "lang": "ar", "src_hash": "9fdb79e4853a", "question": "متى بنوا الرومان مسارح الصيد في تونس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00154", "lang": "ar", "src_hash": "a0e78731ba4e", "question": "ماذا حدث للفينيقيين، هل ماتوا من الجوع أو من العطش؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00155", "lang": "ar", "src_hash": "fe91c0ece951", "question": "لماذا بنوا المصريون القدماء هذه البوابات الكبيرة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00156", "lang": "ar", "src_hash": "751204765a9f", "question": "هل عاش التونسيون في الماضي في الكهوف مثل الحيوانات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00157", "lang": "ar", "src_hash": "83808da83785", "question": "ما كان البانيات الرومانية؟ كانت مثل الحمامات التي نستخدمها الآن؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00158", "lang": "ar", "src_hash": "e0279b885ac1", "question": "كيف كان القدرة على القراءة والكتابة عند اليونانيين القدماء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00159", "lang": "ar", "src_hash": "4e5d59eb17c2", "question": "كانت هناك حيوانات برية في تونس القديمة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00160", "lang": "ar", "src_hash": "f0a3b97addd1", "question": "هل كان الكarthaginois أفضل من الرومان في الحرب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00161", "lang": "ar", "src_hash": "89968e172ffc", "question": "كيف اكتشف الفينيقيون عن معدن الكبريت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00162", "lang": "ar", "src_hash": "1a733209c5e2", "question": "هل كان الناس من قرطاج يملكون بيوتًا مثل البيوت التي نملكها اليوم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00163", "lang": "ar", "src_hash": "5e6836334317", "question": "ما هو القائد الأعلى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00164", "lang": "ar", "src_hash": "a3f652310f4d", "question": "هل كان الأجداد من البربر حربيين حقيقيين أم فقط صيادين؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00165", "lang": "ar", "src_hash": "284fde5cb512", "question": "كيف استطاعوا أن ينجوا بدون الهواتف والكمبيوترات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00166", "lang": "ar", "src_hash": "4fd5a65c23ab", "question": "هل كان للقرطاجيين أي حرب ضد الروم في مياه البحر المتوسط؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00167", "lang": "ar", "src_hash": "b94666287b8b", "question": "هل يعتقد المؤرخون أن تونس بلد قديمة نسيها الناس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00168", "lang": "ar", "src_hash": "e8757539dd81", "question": "أي البلدان أكبر في العالم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00169", "lang": "ar", "src_hash": "d121c9c6d3f1", "question": "هل الكروت صحيحة أم تخطئ؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00170", "lang": "ar", "src_hash": "5dba251ef46a", "question": "هل يمكنكم أن تظهر لنا مكان مدينة تونس على الخريطة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00171", "lang": "ar", "src_hash": "391201d488fa", "question": "ما عدد المناطق التي نجد في تونس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00172", "lang": "ar", "src_hash": "5fa3317ce8c0", "question": "لماذا تختلف مدننا عن بعضها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00173", "lang": "ar", "src_hash": "e43a3bf0a2c8", "question": "هل يمكنكم أن تُظهرنا مكان شاطئ السكيرات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00174", "lang": "ar", "src_hash": "23ae1420c31f", "question": "لماذا تكون تونس أخضر أكثر من فرنسا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00175", "lang": "ar", "src_hash": "206284139937", "question": "هل يمكنكم أن告诉نا أسماء الثلاثة مناطق الأكثر شهرة في تونس؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00176", "lang": "ar", "src_hash": "50222b57d3fc", "question": "ما هو الصحراء في تونس؟ هل الناس يعيشون هناك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00177", "lang": "ar", "src_hash": "0dbe9e535e9a", "question": "لماذا تكون مدنًا أكبر من قرى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00178", "lang": "ar", "src_hash": "e061352ce817", "question": "لم أسمع قط عن منطقة طاطاوين. هل هناك فقط دunes من الرمال؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00179", "lang": "ar", "src_hash": "d614510a2c79", "question": "ما هو الصحراء؟ هل هي موجودة في تونس أيضا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00180", "lang": "ar", "src_hash": "44dec1d8d82c", "question": "كيف يُظهرن الكروت الجبال؟ تذكرني دائمًا بالهضاب في حديقتي.", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00181", "lang": "ar", "src_hash": "e44966d46a56", "question": "هل توجد جبال في تونس؟ وماذا تسمى الجبال التي تحت الماء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00182", "lang": "ar", "src_hash": "a5796b595448", "question": "لماذا البحر الأبيض المتوسط مهم جداً للتونس؟ يبدو لي قريباً جداً!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00183", "lang": "ar", "src_hash": "089e5ec4a380", "question": "أنا أرى على الخريطة أن مدينة صفاقس قريبة من البحر. ماذا يفعل الناس في هذه المدينة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00184", "lang": "ar", "src_hash": "de151cd35c32", "question": "أي بلدان تحيط بالمحيط المتوسط في شمال أفريقيا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00185", "lang": "ar", "src_hash": "d593ed63a87d", "question": "ما اسم عاصمة تونس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00186", "lang": "ar", "src_hash": "0408527b7781", "question": "هل هناك نجوم على خريطة العالم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00187", "lang": "ar", "src_hash": "1afe6ede4322", "question": "أي القارات نراها على الخريطة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00188", "lang": "ar", "src_hash": "d9892eebb5da", "question": "ما هو الدولة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00189", "lang": "ar", "src_hash": "60cb0e9d738a", "question": "هل هناك طرق تمر عبر الجبال في تونس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00190", "lang": "ar", "src_hash": "e78e243dcaf4", "question": "كيف يختلف المناخ من بلد إلى أخرى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00191", "lang": "ar", "src_hash": "8de387ffafaf", "question": "ما يعني عندما نقول أن المياه مملحة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00192", "lang": "ar", "src_hash": "cb3db8b2ed80", "question": "لماذا يحتوي الكلمات على حروف وليس عليها ألوان؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00193", "lang": "ar", "src_hash": "ef70a6a2e10b", "question": "ما كتاب للأطفال إذا لم يحتوي على رسومات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00194", "lang": "ar", "src_hash": "1577fb79b0f3", "question": "لماذا تختلف اللغات من بلد إلى بلد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00195", "lang": "ar", "src_hash": "12d1d02bab30", "question": "كيف ينجح الكتابة على ظهرها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00196", "lang": "ar", "src_hash": "0cdbec435b48", "question": "ما هو القصة إذا لم نكن هنا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00197", "lang": "ar", "src_hash": "d31986f788aa", "question": "أي الكلمات التي تُقال عكسًا لها معنى خاص؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00198", "lang": "ar", "src_hash": "d030b77b2852", "question": "إذا كتبنا كلمة لا توجد في اللغة، هل تعملstill?", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00199", "lang": "ar", "src_hash": "5980a7cfb3b7", "question": "هل يوجد كتب تتكلم بحد ذاتها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00200", "lang": "ar", "src_hash": "328459502073", "question": "لماذا يكتبون الكلمات بالحرف الكبير في بداية الجملة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00201", "lang": "ar", "src_hash": "ad09444d6e74", "question": "لم أفهم لماذا يكرر بعض الحروف في كلمة، هذا غريب!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00202", "lang": "ar", "src_hash": "26c45fd1c9f4", "question": "إذا كان الكلمات مكتوبة بطريقة معينة، كيف سأعرفها لقراءتها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00203", "lang": "ar", "src_hash": "e08ef4a04a72", "question": "هل هناك لغات لا يفهمها الناس، حتى لو كانوا يستخدمون قاموس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00204", "lang": "ar", "src_hash": "c5b3f8469472", "question": "هل هناك كلمات يحتوي بعضها على أكثر من معنى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00205", "lang": "ar", "src_hash": "3455554640e7", "question": "أريد أن أتعلم اللغة اليابانية، لكن كيف يمكنني أن أفعل ذلك إذا كانت مختلفة جداً عن لغةنا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00206", "lang": "ar", "src_hash": "d65e68615b63", "question": "إذا كتبنا قصة، هل يجب أن نضع أخطاء في القصة حتى تكون أكثر طبيعية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00207", "lang": "ar", "src_hash": "a1a4a6a04096", "question": "لماذا كتب الكتب غالباً تحتوي على كلمات لا أعرفها، وكيف يمكنني أن أتعرف عليها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00208", "lang": "ar", "src_hash": "0b5756a7d9e5", "question": "لماذا يوجد مفردات للنouns ولكن لا يوجد مفردات للverbs؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00209", "lang": "ar", "src_hash": "fcf1818ef3e1", "question": "أنا ضائع في رواية، من كتب هذا الحقائق أو للاستمتاع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00210", "lang": "ar", "src_hash": "e06ade308e04", "question": "كيف يخترعون الكُتاب هذه القصص الطويلة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00211", "lang": "ar", "src_hash": "8ce0571b5e06", "question": "هل هناك كلمات تعني 'لا شيء' في كل اللغات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00212", "lang": "ar", "src_hash": "ff2bcdf90e00", "question": "لم أفهم لماذا العناوين في الكتب دائماً قصيرة، هل هي لعب الغرابة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00213", "lang": "ar", "src_hash": "44fb18fb366f", "question": "هل الحق أن اللغات هي أسرار وكل الناس لا يتكلمون عنها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00214", "lang": "ar", "src_hash": "15dd9fbffea4", "question": "كيف يترجمون الناس الجمل نفسها إذا كانت الأصل مختلف؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00215", "lang": "ar", "src_hash": "f05aada5c7c5", "question": "أنا أرى بعض الكلمات لها معاني متعددة، كيف يحدث ذلك في القواميس؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00216", "lang": "ar", "src_hash": "075c83cb6d5e", "question": "لماذا يوجد مفاتيح على الحواسيب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00217", "lang": "ar", "src_hash": "b401c1c6e8a3", "question": "هل يمكن للروبوتات أن تفكروا مثلنا البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00218", "lang": "ar", "src_hash": "964c9bbf3676", "question": "كيف يمكن للجوال أن يتكلم مع شخص في آخر العالم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00219", "lang": "ar", "src_hash": "88eeae4219f9", "question": "ما هو الإنترنت؟ هل هو شبكة من السجاد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00220", "lang": "ar", "src_hash": "947ab2182882", "question": "لماذا لا ينهض الحواسيب و لا ينامن مثل البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00221", "lang": "ar", "src_hash": "74afa2e9b164", "question": "هل يمكننا أن نبرمج روبوتًا ليحول لي واجباتي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00222", "lang": "ar", "src_hash": "741767715cc7", "question": "كيف يعرف الحاسوب أين هي الصور على الشاشة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00223", "lang": "ar", "src_hash": "e29e566fa4b7", "question": "هل يمكن للروبوتات أن تكون أصدقاء مثل لعبي البلاط؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00224", "lang": "ar", "src_hash": "688c8190cd79", "question": "كيف يمكن للكمبيوتر أن يفعل كل هذه الأشياء في نفس الوقت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00225", "lang": "ar", "src_hash": "5be29efc5d40", "question": "هل سيحل robots مكان البشر يوماً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00226", "lang": "ar", "src_hash": "eb0d1ee6d4fa", "question": "كيف ي запис الموبايل رسائلي إذا كان في جيبتي؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00227", "lang": "ar", "src_hash": "6c39a5a6ebe8", "question": "لماذا يصل الواي فاي مباشرة إلى البيت وليس إلى الشارع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00228", "lang": "ar", "src_hash": "cc9bdfdbd5bf", "question": "لماذا يبدو أن ألعاب الفيديو تكون حقيقية جداً الآن، كأنهما حقيقيين؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00229", "lang": "ar", "src_hash": "c1726385b5a5", "question": "كيف يعرف الحواسيب من أنا و ما أريد فعله؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00230", "lang": "ar", "src_hash": "44424ba1ac51", "question": "هل يمكننا أن نصنع روبوتات تكون ذكائها مثل ذكاء البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00231", "lang": "ar", "src_hash": "194bf414e647", "question": "كيف يعرف الحاسوب ما أبحث عنه على الإنترنت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00232", "lang": "ar", "src_hash": "3d3a1302c100", "question": "كيف يخزون كل المعلومات على الإنترنت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00233", "lang": "ar", "src_hash": "8be034377b83", "question": "لماذا لا يمكن للروبوتات أن تعلمنَ بأنفسها مثل البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00234", "lang": "ar", "src_hash": "249e17358102", "question": "ما هو الخوارزمي؟ وكيف يعمل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00235", "lang": "ar", "src_hash": "0dcca181bed4", "question": "هل يمكنك أن تصنع آلة تنتقل بحد ذاتها دون كمبيوتر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00236", "lang": "ar", "src_hash": "50db0fd5a24a", "question": "كيف يحدث إذا كتبنا كلمة في جوجل ووجدت مئات من النتائج؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00237", "lang": "ar", "src_hash": "8b72be07934e", "question": "لماذا يحتاج والداي أن يضعوا كلمات المرور إذا علمنا بعضنا البعض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00238", "lang": "ar", "src_hash": "153783473257", "question": "هل يمكنك أن تصنع آلة يمكنها أن تلعب ألعاب الفيديو مثلي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00239", "lang": "ar", "src_hash": "a2f4c454d80e", "question": "كيف يعمل لكي تتمكن تطبيق على هاتفي من التحدث معي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00240", "lang": "ar", "src_hash": "e22b98870f63", "question": "لماذا أنا خائف عندما يكون الغرفة سوداء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00241", "lang": "ar", "src_hash": "cc7ffc5a05f3", "question": "لماذا تكون أمي حزينة عندما يكون صديقها مريضا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00242", "lang": "ar", "src_hash": "e5fe3a5cb133", "question": "هل سيغضب أخي مني لأنني أخذت لعبه؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00243", "lang": "ar", "src_hash": "2e70539aaaa5", "question": "لماذا أكون كذلك غاضباً عندما لا أسمح لي باللعب مع الآخرين؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00244", "lang": "ar", "src_hash": "c390b9e145ba", "question": "هل يخاف القطط مثل البشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00245", "lang": "ar", "src_hash": "4d0d79900d21", "question": "لماذا يقولون إن أختي جالسة عندما تعرضت على اللعب معي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00246", "lang": "ar", "src_hash": "951d9113f677", "question": "لماذا الناس يبكون عندما هم سعداء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00247", "lang": "ar", "src_hash": "25a5db0dcad3", "question": "لماذا أشعر بالمرض عندما يكون أبي سيئاً معي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00248", "lang": "ar", "src_hash": "3986a38956fa", "question": "لماذا أخشى الكلب إذا كان يضربني و إذا قال لي أبي أن الكلاب طيبات؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00249", "lang": "ar", "src_hash": "8f0bf16bc761", "question": "ماذا يحدث إذا بكيت في العلن؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00250", "lang": "ar", "src_hash": "eab5d45d4b71", "question": "لماذا أنا حزين من أخي عندما يحصل على علامة جيدة و أنا لا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00251", "lang": "ar", "src_hash": "dea65c0da12e", "question": "هل أبي يحدثني دائمًا بصوت عال، يعني أنه يحبني أقل من أخي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00252", "lang": "ar", "src_hash": "bfcbad3abf50", "question": "أنا أرى الناس البكاء على التلفزيون، هل يعني هذا أن والداهم ماتوا أو أنهم فقط خدشوا أنفسهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00253", "lang": "ar", "src_hash": "d922b81ca6e4", "question": "لماذا صارت صديقتي حزينة بعد أن وقعت في حادثة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00254", "lang": "ar", "src_hash": "f416e67bbb74", "question": "إذا أردت أن أأكل كل الحلوى التي اشتريتها، لكن أبي يقول لي أن أأكل واحدة فقط، هل هذا غضب؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00255", "lang": "ar", "src_hash": "a3ebb1b230cc", "question": "هو صديقي فقد كلبَه و يبكي كثيرا، هل يعني هذا أنه سيرู้حس أفضل إذا بكى؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00256", "lang": "ar", "src_hash": "9671b44a6877", "question": "هل الخوف هو مشاعر سيئة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00257", "lang": "ar", "src_hash": "667da9e8f5c7", "question": "لماذا الناس يغضبون من الأشخاص الذين يحبونهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00258", "lang": "ar", "src_hash": "6576466fcce4", "question": "ألم أعرف أن الكبار يخافون من أنهم لن يكونوا ممتعين، صحيح؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00259", "lang": "ar", "src_hash": "66e82d53d3ed", "question": "ما هو الحزن؟ هل هو مثل الحزن الدائم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00260", "lang": "ar", "src_hash": "ddad7b328cc9", "question": "هل والدي يبدو متعباً عندما يراك على التلفاز، لكنه لا يتكلم عن ذلك؟ هل هو حزين بالفعل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00261", "lang": "ar", "src_hash": "74db38a66324", "question": "هل يمكننا أن نتعلم كيف لا نغضب بسهولة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00262", "lang": "ar", "src_hash": "a165f81e6fac", "question": "لماذا الناس يشتاقون لبعضهم البعض عندما هم سعداء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00263", "lang": "ar", "src_hash": "6242bf9b5a1f", "question": "أنا غاضبة، لكنني لا أفهم لماذا، كيف يحدث هذا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00264", "lang": "ar", "src_hash": "b3bec67905da", "question": "لماذا ينمو صدر أمي عندما هي حامل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00265", "lang": "ar", "src_hash": "a09192569de0", "question": "ماذا نقدر نقول إذا كبرنا، ونظل صغار؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00266", "lang": "ar", "src_hash": "f2e897386861", "question": "كيف يكون أبي أقوى مني؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00267", "lang": "ar", "src_hash": "d0853400ef9d", "question": "أين كانوا الأطفال قبل أن يأتوا في بطن أمه؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00268", "lang": "ar", "src_hash": "5e03049ccf36", "question": "أنا أشعر أن أسنانى تتغير، هل هذا لأنى قد كبرت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00269", "lang": "ar", "src_hash": "bb26d32559a8", "question": "هل الناس يقولون أن الأطفال يأتون من « السماء »؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00270", "lang": "ar", "src_hash": "d5fa1ebcb8f4", "question": "لماذا الأمهات دائمًا متعبات بعد أن يولد الطفل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00271", "lang": "ar", "src_hash": "5dcc4eda0633", "question": "كيف يمكن للرجال والنساء أن يصنعوا الأطفال معًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00272", "lang": "ar", "src_hash": "001ca9c46aec", "question": "لماذا أصبحت ساقي سميكتين كل حانة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00273", "lang": "ar", "src_hash": "33f438157a46", "question": "لما يحتوي بطن عمي الكثير؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00274", "lang": "ar", "src_hash": "956ffc7498f6", "question": "هل الصدف يقولون أن البنات سوف تبكين عندما يصبحن أكبر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00275", "lang": "ar", "src_hash": "9efe8d75a284", "question": "هل يأتي الأطفال من بطن أمهما بالفعل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00276", "lang": "ar", "src_hash": "4c8798967a97", "question": "أنا أرى بنات يملكون صدرين، لكن لم يملكنه بعض أصدقائي، لماذا يحدث ذلك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00277", "lang": "ar", "src_hash": "56ebd4840d60", "question": "يقول أخي أن الأولاد ينمون الشعر في كل مكان، صحيح أم خطأ؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00278", "lang": "ar", "src_hash": "b175eb89bde7", "question": "أنا أسأل كيف الناس بدأوا في جعل الأطفال قبل أن يكونوا بيوتا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00279", "lang": "ar", "src_hash": "3b9b7e747771", "question": "لماذا يوجد بعض الذهب على أسنان أبي؟ ما معنى ذلك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00280", "lang": "ar", "src_hash": "89c084b8bb23", "question": "لماذا يبدو أن الفتيات لديهن صدر أكبر من الصدر الذي يملكه الأولاد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00281", "lang": "ar", "src_hash": "6af2f12fe4d9", "question": "لماذا يموت الناس في المستشفى كثيرًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00282", "lang": "ar", "src_hash": "0de4142c299d", "question": "ماذا يفعل قطتي عندما تكون مريضة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00283", "lang": "ar", "src_hash": "2e3037526bfe", "question": "هل هذا علامة أن جدي يذهب؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00284", "lang": "ar", "src_hash": "98c105fa10b8", "question": "أين هي جدتي أمي؟ وكم من أسوأ من المطر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00285", "lang": "ar", "src_hash": "e62da1710315", "question": "هل يقول والدي أن الحيوانات تذهب إلى مكان ينامون فيه عندما يكون هناك طعام؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00286", "lang": "ar", "src_hash": "4a78c99338b2", "question": "أنا مريض، لكنني سأكون بخير. كيف نعرف إذا كاننا سنموت أم لا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00287", "lang": "ar", "src_hash": "b70d337ede91", "question": "لماذا يجب على الناس الذين هم مريضين أن يذهبوا إلى الطبيب؟ لماذا لا يبقون في المنزل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00288", "lang": "ar", "src_hash": "7cc9f84c9182", "question": "سوف يموت قطتي، هو قديم. يجب أن أ دفنه في الحديقة أم أننا يمكننا فعل شيء آخر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00289", "lang": "ar", "src_hash": "b26d02924981", "question": "ماذا يحدث للناس بعد أن يموتون؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00290", "lang": "ar", "src_hash": "029ff0c32887", "question": "ماذا يعني أن جدتي قد أصيبت بمرض و لا يمكنها المشي الآن؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00291", "lang": "ar", "src_hash": "0583abb514e4", "question": "لما مات كلبي أريد أن لا ألعب. لماذا يجب أن يذهب كلبي هكذا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00292", "lang": "ar", "src_hash": "9ad619ea968e", "question": "هل الناس يقولون أن الحيوانات تذهب إلى الجنة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00293", "lang": "ar", "src_hash": "d0a46a3a6665", "question": "أنا قلق عن أبي، هل هو بخير؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00294", "lang": "ar", "src_hash": "fa58b01ca2d7", "question": "يقول أبي أن جدتي في سلام، ماذا يعني هذا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00295", "lang": "ar", "src_hash": "19520fb1dd45", "question": "لماذا الناس يبكون لأن الناس ماتوا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00296", "lang": "ar", "src_hash": "a4b598947a38", "question": "ماذا سيحدث عندما أمت إذاً؟ سيصابون بالحزن أم بالسعادة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00297", "lang": "ar", "src_hash": "45ae8aa45b76", "question": "ماذا يحدث عندما نتموت؟ هل يظلنا ننام إلى الأبد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00298", "lang": "ar", "src_hash": "97b0cc3d3336", "question": "لماذا أبي مريض ويعاني من الحمى، بينما أنا لا أشعر بأي شيء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00299", "lang": "ar", "src_hash": "d5347512f167", "question": "لقد خسرت قطتي، لماذا لم يعود؟ هل وجد مكانًا آخر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00300", "lang": "ar", "src_hash": "2677b57d8649", "question": "هل جدتي ماتت، ولكنها بخير الآن؟ هل هذا مثل النوم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00301", "lang": "ar", "src_hash": "ca81f4e872a1", "question": "إذا ماتت، هل يمكنني بعد ذلك اللعب مع أصدقائي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00302", "lang": "ar", "src_hash": "69f122e31a45", "question": "لماذا يموت الناس الذين كبيرون؟ هل هم متعبون؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00303", "lang": "ar", "src_hash": "0fedfbe98114", "question": "هل يقول والدي أن الحيوانات تموت ليكونوا سعيدون في مكان آخر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00304", "lang": "ar", "src_hash": "927c177ce1d2", "question": "ما هي الموت؟ هل نرى شيء بعد الموت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00305", "lang": "ar", "src_hash": "c13b2706ae33", "question": "لماذا يلعبون دائمًا مع بعض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00306", "lang": "ar", "src_hash": "ad8ff433b778", "question": "أنا آسف، أنا في خلاف مع أخي، أنا مريض. لا أريد أن يتكلم معي أبداً.", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00307", "lang": "ar", "src_hash": "133415accf29", "question": "هل الأطفال الذين يتنازعون هم أشرار؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00308", "lang": "ar", "src_hash": "e2c7760214c3", "question": "لماذا يقولون لي أنني لومة أو دب؟ هذا غريب!", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00309", "lang": "ar", "src_hash": "b417cc1f2b70", "question": "كيف أستطيع أن أكون مع أصدقائي حتى إذا كان لي مرض؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00310", "lang": "ar", "src_hash": "21f05fbeba8d", "question": "لا أريد أن يقولوا لي أن أعود إلى البيت، هذا صحيح؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00311", "lang": "ar", "src_hash": "821f43439119", "question": "لماذا يلعبون معي السيوف؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00312", "lang": "ar", "src_hash": "e975676e28aa", "question": "ما يقول لي أمي أنني يجب أن أستغفر، لكن كيف أفعل؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00313", "lang": "ar", "src_hash": "ba8935b4538f", "question": "لماذا ي討وني إخوتي إذا أتركهم يلعبون في ألعابي؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00314", "lang": "ar", "src_hash": "e34308e24211", "question": "ماذا أفعل إذا كان الآخرون يكرهونني بسبب ثوبي الذي يبدو زاهياً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00315", "lang": "ar", "src_hash": "0d7606f7635f", "question": "أنا حزين جداً على صديقي الأفضل، لكنه قد غفر لي पहलًا، لماذا لا أفعل الشيء نفسه؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00316", "lang": "ar", "src_hash": "42ff444aee94", "question": "لماذا يظل أخواتي دائماً متسائلين مني؟ لقد حصلت على جديدة، كيف يمكنني أن أجعلهم سعداء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00317", "lang": "ar", "src_hash": "94a647a60a84", "question": "أنا ذكرت عندما كنت صغيرة, كنت خائف من أن أقاتل أخواتي, لماذا الأطفال الأكبر سنًا لا يمكن أن يكونوا جيدين؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00318", "lang": "ar", "src_hash": "43d87f75ee4e", "question": "إذا أترك أخي يحصل على اللعبة الأخيرة، سيغضب مني لسنوات، هل هذا جيد أم لا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00319", "lang": "ar", "src_hash": "8c65f36a431f", "question": "أصدقائي يعتقدون أنني سخيف لأنني أكون حساسًا للفولاوات، لا أفهم لماذا يعتبرونها مشكلة.", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00320", "lang": "ar", "src_hash": "c72e353b3934", "question": "إذا أخذ أخي مني ضرباً في البطن، يجب أن أعطيه ضرباً في البطن أيضًا، أو ليست هذه العدالة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00321", "lang": "ar", "src_hash": "3c17abe3646a", "question": "هل الناس الذين يضربونني في المدرسة سعداء في حياتهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00322", "lang": "ar", "src_hash": "ed47400f0caa", "question": "أنا غاضب من أخي، كيف أفعل لئلا أحبسه كثيراً؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00323", "lang": "ar", "src_hash": "a8a01c910e47", "question": "أنا أعرف أنني لا يجب أن أضرب إخوتي، لكنه شيء صعب، كيف أفعل لئلا أتفجر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00324", "lang": "ar", "src_hash": "9990cdaa3101", "question": "إذا كانوا يقطعونك كثيرًا، ماذا كنت تفعل؟ كيف ستشعر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00325", "lang": "ar", "src_hash": "f5ed492e4c6b", "question": "لماذا أصدقائي لا يريدون أن يلعبوا معي بعد أن بكيت بسببهم؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00326", "lang": "ar", "src_hash": "123f7c393076", "question": "أنا خائف، كيف أفعل ليتوقف الناس عن إهانتي؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00327", "lang": "ar", "src_hash": "f4a0af733296", "question": "هل يعتقدون أننا يجب أن نتعلم كيف نكافح إذا نزاع بيننا في البيت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00328", "lang": "ar", "src_hash": "075f853c9b89", "question": "هل الناس الذين يضربون الآخرين في المدرسة هم وحددهم، لديهم أصدقاء؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00329", "lang": "ar", "src_hash": "cd713b278679", "question": "لماذا يمكن للشخصيات في الألعاب الإلكترونية أن تفعل أشياء التي لا يمكننا فعله في الواقع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00330", "lang": "ar", "src_hash": "0ae5e90323ee", "question": "ماذا يحدث عندما يضيف شخص ليك على الإنترنت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00331", "lang": "ar", "src_hash": "bf937426c3a0", "question": "إذا كان لي أصدقاء على الإنترنت، لماذا لا أستطيع أن ألتقي بهم في الواقع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00332", "lang": "ar", "src_hash": "6256409eded5", "question": "لماذا يلعب الأطفال الكبار في ألعاب الفيديو معنا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00333", "lang": "ar", "src_hash": "2e8d5cbf5e85", "question": "ما هو 'خطر الغريب'؟ وكيف يمكنني أن أهتم به؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00334", "lang": "ar", "src_hash": "8337792654ec", "question": "لماذا الناس ي publish صور أكلاتهم على الإنترنت، هل يجعلهم أكثر سعادة؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00335", "lang": "ar", "src_hash": "a02be06df3af", "question": "إذا أعطيت عنوان بريدك الإلكتروني لشخص تعرفه، هل يمكنه أن يفعل لك ضرر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00336", "lang": "ar", "src_hash": "e9183f8b2e2b", "question": "هل هناك ألعاب فيديو تعلم الناس أن يكونوا جيدين ويتعاملون مع بعضهم بالحسبان؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00337", "lang": "ar", "src_hash": "98c959821de6", "question": "لماذا يكون بعض اللاعبين في ألعاب الفيديو سيئين مع بعضهم في الإنترنت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00338", "lang": "ar", "src_hash": "027168a28c44", "question": "هل يمكننا أن نكون أصدقاء مع شخص نلتقي به على إنستجرام؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00339", "lang": "ar", "src_hash": "92cee46a03c1", "question": "كيف يعرفون كل أسراري إذا دعوتهم على Fortnite؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00340", "lang": "ar", "src_hash": "95ce5cdc2bcb", "question": "هل هناك أشخاص يعتقدون أنهم شخصيات من ألعاب الفيديو في الواقع؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00341", "lang": "ar", "src_hash": "8e8e88f4e2d1", "question": "ما يقول لي أمي إنني يجب أن أكون حكيمة على الإنترنت، لكن كيف أفعل ذلك؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00342", "lang": "ar", "src_hash": "3ebbf1f2c89c", "question": "هل يمكننا أن نكون أصدقاء على الإنترنت دون أن نعرف أحدًا؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00343", "lang": "ar", "src_hash": "b427d6dba4cf", "question": "لماذا يربح لاعبون في Fortnite الكثير من المال من خلال البث المباشر؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00344", "lang": "ar", "src_hash": "90c6fe0f0fe7", "question": "ماذا نفعل إذا أخذ أخي رسالة غريبة من شخص مجهول على ديسكورد؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00345", "lang": "ar", "src_hash": "a98c893c374e", "question": "أريد أن أ создаَ مجتمع للاعبين على الإنترنت لعبًا معًا في ميكروفتونش، كيف أفعل؟", "ok": false, "model": "llama3.1:8b"}
+{"qid": "syn_00346", "lang": "ar", "src_hash": "98246e0737d0", "question": "هل يمكن أن يتعلمنا الألعاب الفيديوية حل مشاكل حياتنا الحقيقية؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00347", "lang": "ar", "src_hash": "b368ff9c8e0d", "question": "كيف نعرف إن شخص ما هو حقيقيا ما يقول أنه هو في الإنترنت؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00348", "lang": "ar", "src_hash": "e0b2e874aadb", "question": "هل أخبرت أختي أن الشهرة على إنستجرام تسبب في إرهاقها؟", "ok": true, "model": "llama3.1:8b"}
+{"qid": "syn_00349", "lang": "ar", "src_hash": "71de5a7153a1", "question": "هل يمكن أن يساعدنا ألعاب الفيديو على مواجهة ضغط الشبكات الاجتماعية؟", "ok": true, "model": "llama3.1:8b"}

@@ -1,10 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
-type From = "chaty" | "child" | "gentle";
+type From = "kotty" | "child" | "gentle";
 
 const styles: Record<From, string> = {
-  chaty: "bg-white self-start rounded-ss-md",
+  kotty: "bg-white self-start rounded-ss-md",
   gentle: "bg-white self-start rounded-ss-md border-2 border-menthe",
   child: "bg-ciel self-end rounded-se-md",
 };

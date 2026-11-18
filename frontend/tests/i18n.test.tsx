@@ -5,6 +5,13 @@ import { useAppStore } from "../src/store/useAppStore";
 import { renderApp } from "./utils";
 
 describe("langue et thèmes", () => {
+  it("choisir un enfant ne change pas la langue réglée sur l'appareil", () => {
+    useAppStore.setState({ lang: "ar" });
+    useAppStore.getState().selectChild("child_yasmine");
+    expect(useAppStore.getState().currentChildId).toBe("child_yasmine");
+    expect(useAppStore.getState().lang).toBe("ar");
+  });
+
   it("passe toute la page en RTL en arabe", async () => {
     useAppStore.setState({ lang: "ar" });
     renderApp("/");

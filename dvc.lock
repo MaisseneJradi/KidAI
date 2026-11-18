@@ -1,0 +1,263 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python data/download.py
+    deps:
+    - path: data/download.py
+      hash: md5
+      md5: a46ce0e693a5dc681f4f42a01c255dc4
+      size: 2646
+    outs:
+    - path: data/raw/kidbench
+      hash: md5
+      md5: c178523252e0ae81dd1ae051764a9899.dir
+      size: 660528963
+      nfiles: 603
+    - path: data/raw/minorbench
+      hash: md5
+      md5: 86177bab347289224821b124a2d210e0.dir
+      size: 25080
+      nfiles: 3
+    - path: data/raw/orbench
+      hash: md5
+      md5: 0a0b08eb08461f8cbadb269fefbefb46.dir
+      size: 33710710
+      nfiles: 34
+    - path: data/raw/pku_saferlhf
+      hash: md5
+      md5: 30b700252df025e7dec73d15727a8bae.dir
+      size: 233015453
+      nfiles: 9
+    - path: data/raw/safechild
+      hash: md5
+      md5: dfd81b88cc530015c5b66e5c7eaf2102.dir
+      size: 113871
+      nfiles: 23
+    - path: data/raw/thsab
+      hash: md5
+      md5: 537f45758a6d233b2ec090ffd4e2bae4.dir
+      size: 422429
+      nfiles: 2
+  normalize:
+    cmd: python data/prepare.py normalize
+    deps:
+    - path: data/prep/config.py
+      hash: md5
+      md5: ca5d2bc59ca7bbe90b8576c3c0217d2c
+      size: 2254
+    - path: data/prep/sources.py
+      hash: md5
+      md5: 76b2abe77ec71617bb3520d3cec9367e
+      size: 8801
+    - path: data/prepare.py
+      hash: md5
+      md5: 2c4d9991050da5aad35ac60929b67cf2
+      size: 4911
+    - path: data/raw/kidbench/dataset/kidbench
+      hash: md5
+      md5: 6a00fbab97d3b736f32ebec219ae2114.dir
+      size: 375456
+      nfiles: 3
+    - path: data/raw/minorbench/test.csv
+      hash: md5
+      md5: 1d84664a13fb7d0743e945243e9b5aab
+      size: 19997
+    - path: data/raw/orbench/or-bench-hard-1k.csv
+      hash: md5
+      md5: 1c37892fc4d43485518afab746bb175d
+      size: 169255
+    - path: data/raw/orbench/or-bench-toxic.csv
+      hash: md5
+      md5: 48f86683cc11f376798e87e71d80ead0
+      size: 64721
+    - path: data/raw/pku_saferlhf/data
+      hash: md5
+      md5: 293290fa5b4927a1b588aa298e58b12a.dir
+      size: 232675755
+      nfiles: 6
+    - path: data/raw/safechild/assets
+      hash: md5
+      md5: 184c78bf16b1156f1c02d07a0556872c.dir
+      size: 51770
+      nfiles: 2
+    - path: data/raw/thsab/T-HSAB Corpus
+      hash: md5
+      md5: 4925150ff0655d26cc094426b380293f.dir
+      size: 419349
+      nfiles: 1
+    params:
+      params.yaml:
+        seed: 42
+        sources:
+          orbench_hard_n: 500
+          orbench_toxic_n: 300
+    outs:
+    - path: data/processed/base_en.parquet
+      hash: md5
+      md5: d727cf890a2273d9a73d3079b552ef37
+      size: 165181
+    - path: data/processed/pku_preferences.parquet
+      hash: md5
+      md5: 454b65a5b65e26d01121f7d9c4e83ae8
+      size: 59871269
+    - path: data/processed/thsab_derja.parquet
+      hash: md5
+      md5: 5400e32ed0b5531e6e19e24e879d4e5a
+      size: 487562
+  translate:
+    cmd: python data/prepare.py translate
+    deps:
+    - path: data/prep/llm.py
+      hash: md5
+      md5: 26d80a6b9f79443afe7d33cf828ee665
+      size: 2879
+    - path: data/prep/translate.py
+      hash: md5
+      md5: 9dbdb1887994fee3f81cc0a584d3ba68
+      size: 7692
+    - path: data/processed/base_en.parquet
+      hash: md5
+      md5: d727cf890a2273d9a73d3079b552ef37
+      size: 165181
+    params:
+      params.yaml:
+        translate:
+          models:
+            fr: qwen3:4b
+            ar: llama3.1:8b
+          ollama_options:
+            llama3.1:8b:
+              num_gpu: 24
+          langs:
+          - fr
+          - ar
+          batch_size: 1
+    outs:
+    - path: data/cache/translations.jsonl
+      hash: md5
+      md5: b8117e7f958c1b10f590153c365ea155
+      size: 1148496
+    - path: data/processed/translations.parquet
+      hash: md5
+      md5: ef944d26398bd7ce8c1d87bc845348ea
+      size: 327625
+  synthetic:
+    cmd: python data/prepare.py synthetic
+    deps:
+    - path: data/prep/llm.py
+      hash: md5
+      md5: 26d80a6b9f79443afe7d33cf828ee665
+      size: 2879
+    - path: data/prep/synthetic.py
+      hash: md5
+      md5: ef3399e06c70b5a4722f9a2f28b4ef1d
+      size: 6542
+    - path: data/prep/translate.py
+      hash: md5
+      md5: 9dbdb1887994fee3f81cc0a584d3ba68
+      size: 7692
+    params:
+      params.yaml:
+        synthetic:
+          model: llama3.1:8b
+          langs:
+          - fr
+          translate_to:
+          - ar
+          per_cell: 8
+        translate:
+          models:
+            fr: qwen3:4b
+            ar: llama3.1:8b
+          ollama_options:
+            llama3.1:8b:
+              num_gpu: 24
+          langs:
+          - fr
+          - ar
+          batch_size: 1
+    outs:
+    - path: data/cache/synthetic.jsonl
+      hash: md5
+      md5: 00e54f04759ba5f6c86b7b428baaf025
+      size: 29192
+    - path: data/cache/synthetic_translations.jsonl
+      hash: md5
+      md5: 159e75fd074c006aec1d3929d1f0f7d9
+      size: 69994
+    - path: data/processed/synthetic.parquet
+      hash: md5
+      md5: 3eeb213fa5a8aecf63295b9da50a2724
+      size: 42287
+  build:
+    cmd: python data/prepare.py build
+    deps:
+    - path: data/annotation
+      hash: md5
+      md5: 34da498881716d810c5bfa1cdca1add3.dir
+      size: 211470
+      nfiles: 4
+    - path: data/prep/annotate.py
+      hash: md5
+      md5: dc66c06113ccbeeaf121a1bc56deb107
+      size: 7461
+    - path: data/prep/build.py
+      hash: md5
+      md5: a3de0ccfe2c8cd0a4e62e80bdac0d968
+      size: 7284
+    - path: data/processed/base_en.parquet
+      hash: md5
+      md5: d727cf890a2273d9a73d3079b552ef37
+      size: 165181
+    - path: data/processed/synthetic.parquet
+      hash: md5
+      md5: 3eeb213fa5a8aecf63295b9da50a2724
+      size: 42287
+    - path: data/processed/translations.parquet
+      hash: md5
+      md5: ef944d26398bd7ce8c1d87bc845348ea
+      size: 327625
+    params:
+      params.yaml:
+        build:
+          test_questions: 120
+          val_fraction: 0.1
+        seed: 42
+    outs:
+    - path: data/processed/kidai_dataset.parquet
+      hash: md5
+      md5: 0f7ecb7069713bcee10ee80529ca4b4e
+      size: 749935
+  stats:
+    cmd: python data/prepare.py stats
+    deps:
+    - path: data/annotation
+      hash: md5
+      md5: 34da498881716d810c5bfa1cdca1add3.dir
+      size: 211470
+      nfiles: 4
+    - path: data/prep/stats.py
+      hash: md5
+      md5: 0c049bd102ff9e609f9796be17ce2977
+      size: 3095
+    - path: data/processed/kidai_dataset.parquet
+      hash: md5
+      md5: 0f7ecb7069713bcee10ee80529ca4b4e
+      size: 749935
+    - path: data/processed/pku_preferences.parquet
+      hash: md5
+      md5: 454b65a5b65e26d01121f7d9c4e83ae8
+      size: 59871269
+    - path: data/processed/thsab_derja.parquet
+      hash: md5
+      md5: 5400e32ed0b5531e6e19e24e879d4e5a
+      size: 487562
+    outs:
+    - path: data/processed/kidai_stats.json
+      hash: md5
+      md5: 3312acd6b4e25a89ca839e80a0795454
+      size: 214
+    - path: data/processed/kidai_stats.md
+      hash: md5
+      md5: 316f5fbfea56fd5448ec6a8780822fed
+      size: 3311

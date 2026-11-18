@@ -1,10 +1,10 @@
 import { motion, useReducedMotion, type TargetAndTransition } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-export type ChatyMood = "wave" | "think" | "wonder" | "reassure";
+export type KottyMood = "wave" | "think" | "wonder" | "reassure";
 
-interface ChatyProps {
-  mood?: ChatyMood;
+interface KottyProps {
+  mood?: KottyMood;
   size?: number;
   className?: string;
 }
@@ -12,15 +12,15 @@ interface ChatyProps {
 const loop = (duration: number) => ({ duration, repeat: Infinity, ease: "easeInOut" as const });
 
 // Mouvement global du corps selon l'humeur.
-const bodyMotion: Record<ChatyMood, TargetAndTransition> = {
+const bodyMotion: Record<KottyMood, TargetAndTransition> = {
   wave: { y: [0, -4, 0], transition: loop(1.6) },
   think: { rotate: [0, -6, 0], transition: loop(2.4) },
   wonder: { y: [0, -12, 0], scale: [1, 1.04, 1], transition: loop(0.9) },
   reassure: { rotate: [-3, 3, -3], transition: loop(3) },
 };
 
-/** Chaty, mascotte originale de KidAI : un petit hibou-robot curieux. */
-export function Chaty({ mood = "wave", size = 120, className }: ChatyProps) {
+/** Kotty, mascotte originale de KidAI : un petit hibou-robot curieux. */
+export function Kotty({ mood = "wave", size = 120, className }: KottyProps) {
   const { t } = useTranslation();
   const reduce = useReducedMotion();
   const animate = (target: TargetAndTransition) => (reduce ? undefined : target);
@@ -34,7 +34,7 @@ export function Chaty({ mood = "wave", size = 120, className }: ChatyProps) {
       width={size}
       height={size}
       role="img"
-      aria-label={t("chaty.label")}
+      aria-label={t("kotty.label")}
       data-mood={mood}
       className={className}
     >
@@ -42,7 +42,7 @@ export function Chaty({ mood = "wave", size = 120, className }: ChatyProps) {
         animate={animate(bodyMotion[mood])}
         style={{ transformBox: "fill-box", transformOrigin: "50% 100%" }}
       >
-        {/* Antenne : la lumière clignote quand Chaty réfléchit */}
+        {/* Antenne : la lumière clignote quand Kotty réfléchit */}
         <line x1="100" y1="62" x2="100" y2="34" stroke="#24324A" strokeWidth="4" />
         <motion.circle
           cx="100"

@@ -1,0 +1,93 @@
+# Pipeline de données KidAI (étape 4). « dvc repro » reconstruit kidai_dataset.parquet ;
+# seules les étapes dont une dépendance a changé sont relancées.
+# Les données brutes ne sont pas commitées (download les retélécharge) ; les fichiers produits
+# et les caches du LLM le sont ({cache: false} : Git les transporte, DVC garde leurs empreintes
+# dans dvc.lock pour vérifier qu'on travaille sur les mêmes versions).
+stages:
+  download:
+    cmd: python data/download.py
+    deps:
+      - data/download.py
+    outs:
+      - data/raw/kidbench: {cache: false, persist: true}
+      - data/raw/minorbench: {cache: false, persist: true}
+      - data/raw/orbench: {cache: false, persist: true}
+      - data/raw/safechild: {cache: false, persist: true}
+      - data/raw/pku_saferlhf: {cache: false, persist: true}
+      - data/raw/thsab: {cache: false, persist: true}
+
+  normalize:
+    cmd: python data/prepare.py normalize
+    deps:
+      - data/prepare.py
+      - data/prep/sources.py
+      - data/prep/config.py
+      - data/raw/kidbench/dataset/kidbench
+      - data/raw/minorbench/test.csv
+      - data/raw/orbench/or-bench-hard-1k.csv
+      - data/raw/orbench/or-bench-toxic.csv
+      - data/raw/safechild/assets
+      - data/raw/pku_saferlhf/data
+      - data/raw/thsab/T-HSAB Corpus
+    params:
+      - seed
+      - sources
+    outs:
+      - data/processed/base_en.parquet: {cache: false}
+      - data/processed/pku_preferences.parquet: {cache: false}
+      - data/processed/thsab_derja.parquet: {cache: false}
+
+  translate:
+    cmd: python data/prepare.py translate
+    deps:
+      - data/prep/translate.py
+      - data/prep/llm.py
+      - data/processed/base_en.parquet
+    params:
+      - translate
+    outs:
+      - data/processed/translations.parquet: {cache: false}
+      # Cache des réponses du LLM : conservé entre deux exécutions (reprise sans tout refaire).
+      - data/cache/translations.jsonl: {cache: false, persist: true}
+
+  synthetic:
+    cmd: python data/prepare.py synthetic
+    deps:
+      - data/prep/synthetic.py
+      - data/prep/translate.py
+      - data/prep/llm.py
+    params:
+      - synthetic
+      - translate
+    outs:
+      - data/processed/synthetic.parquet: {cache: false}
+      - data/cache/synthetic.jsonl: {cache: false, persist: true}
+      - data/cache/synthetic_translations.jsonl: {cache: false, persist: true}
+
+  build:
+    cmd: python data/prepare.py build
+    deps:
+      - data/prep/build.py
+      - data/prep/annotate.py
+      - data/processed/base_en.parquet
+      - data/processed/translations.parquet
+      - data/processed/synthetic.parquet
+      - data/annotation # feuilles d'annotation (commitées dans Git)
+    params:
+      - seed
+      - build
+    outs:
+      - data/processed/kidai_dataset.parquet: {cache: false}
+
+  stats:
+    cmd: python data/prepare.py stats
+    deps:
+      - data/prep/stats.py
+      - data/processed/kidai_dataset.parquet
+      - data/processed/pku_preferences.parquet
+      - data/processed/thsab_derja.parquet
+      - data/annotation
+    outs:
+      - data/processed/kidai_stats.md: {cache: false}
+    metrics:
+      - data/processed/kidai_stats.json: {cache: false}
