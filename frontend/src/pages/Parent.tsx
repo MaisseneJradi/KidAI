@@ -21,7 +21,6 @@ import {
   type Child,
   type ChildInput,
   type HistoryItem,
-  type Lang,
   type Sex,
   type Topic,
 } from "../api/types";
@@ -42,7 +41,6 @@ const emptyChild: ChildInput = {
   birth_date: "",
   sex: "non_precise",
   grade: "3e_annee",
-  lang: "fr",
   caution_level: "standard",
   interests: [],
   needs: [],
@@ -136,17 +134,6 @@ function ChildForm({
               {t(`grades.${g}`)}
             </option>
           ))}
-        </select>
-      </label>
-      <label className="flex flex-col gap-1">
-        {t("parent.lang")}
-        <select
-          value={form.lang}
-          onChange={(e) => set("lang", e.target.value as Lang)}
-          className={fieldClass}
-        >
-          <option value="fr">{t("languages.fr")}</option>
-          <option value="ar">{t("languages.ar")}</option>
         </select>
       </label>
       <label className="flex flex-col gap-1">
@@ -249,7 +236,7 @@ function ChildrenSection({ children }: { children: Child[] }) {
                 <span className="block font-semibold">{c.first_name}</span>
                 <span className="text-sm">
                   {t("age", { count: c.age })} · {t(`parent.sexes.${c.sex}`)} ·{" "}
-                  {t(`grades.${c.grade}`)} · {t(`languages.${c.lang}`)}
+                  {t(`grades.${c.grade}`)}
                 </span>
               </span>
               <Button variant="soft" className="text-sm" onClick={() => setEditing(c.id)}>

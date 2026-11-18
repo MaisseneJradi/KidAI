@@ -16,7 +16,7 @@ interface AppState {
   parentUnlocked: boolean;
   setToken: (token: string | null) => void;
   logout: () => void;
-  selectChild: (id: string | null, lang?: Lang) => void;
+  selectChild: (id: string | null) => void;
   setLang: (lang: Lang) => void;
   setSounds: (on: boolean) => void;
   setTheme: (theme: ThemeChoice) => void;
@@ -34,7 +34,7 @@ export const useAppStore = create<AppState>()(
       parentUnlocked: false,
       setToken: (token) => set({ token }),
       logout: () => set({ token: null, currentChildId: null, parentUnlocked: false }),
-      selectChild: (id, lang) => set(lang ? { currentChildId: id, lang } : { currentChildId: id }),
+      selectChild: (id) => set({ currentChildId: id }),
       setLang: (lang) => set({ lang }),
       setSounds: (sounds) => set({ sounds }),
       setTheme: (theme) => set({ theme }),

@@ -41,7 +41,6 @@ class Child(Base):
     birth_date: Mapped[str] = mapped_column(EncryptedText)
     sex: Mapped[str] = mapped_column(String(20))
     grade: Mapped[str] = mapped_column(String(20))
-    lang: Mapped[str] = mapped_column(String(5))
     caution_level: Mapped[str] = mapped_column(String(20), default="standard")
     interests: Mapped[list[str]] = mapped_column(JSON, default=list)
     needs: Mapped[list[str]] = mapped_column(EncryptedJSON, default=list)

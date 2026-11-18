@@ -17,7 +17,7 @@ test("FR : choisir un profil → poser une question → voir la réponse et l'il
   await page.getByRole("button", { name: /Yasmine/ }).click();
   await expect(page.getByText(/Bonjour Yasmine/)).toBeVisible();
 
-  await page.getByLabel("Ta question pour Chaty").fill("Pourquoi les volcans explosent ?");
+  await page.getByLabel("Ta question pour Kotty").fill("Pourquoi les volcans explosent ?");
   await page.getByRole("button", { name: "Envoyer" }).click();
 
   await expect(page.getByText(/montagne qui a très chaud/)).toBeVisible();
@@ -31,11 +31,17 @@ test("FR : choisir un profil → poser une question → voir la réponse et l'il
   expect(overflow).toBeLessThanOrEqual(0);
 });
 
-test("AR : la page passe en RTL et Chaty répond en arabe", async ({ page }) => {
+test("AR : la page passe en RTL et Kotty répond en arabe", async ({ page }) => {
   await page.getByRole("button", { name: /Adam/ }).click();
-  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+  await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
 
-  await page.getByLabel("سؤالك لشاتي").fill("لماذا تنفجر البراكين؟");
+  // La langue ne vient plus du profil : elle se choisit dans les réglages.
+  await page.goto("/reglages");
+  await page.getByRole("button", { name: "العربية" }).click();
+  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+  await page.goto("/chat");
+
+  await page.getByLabel("سؤالك لكوتي").fill("لماذا تنفجر البراكين؟");
   await page.getByRole("button", { name: "إرسال" }).click();
 
   await expect(page.getByText(/البركان مثل جبل ساخن/)).toBeVisible();
@@ -43,7 +49,7 @@ test("AR : la page passe en RTL et Chaty répond en arabe", async ({ page }) => 
 
 test("ASK_ADULT : réponse rassurante et alerte dans l'espace parent", async ({ page }) => {
   await page.getByRole("button", { name: /Yasmine/ }).click();
-  await page.getByLabel("Ta question pour Chaty").fill("J'ai peur, un garçon me frappe");
+  await page.getByLabel("Ta question pour Kotty").fill("J'ai peur, un garçon me frappe");
   await page.getByRole("button", { name: "Envoyer" }).click();
   await expect(page.getByText(/adulte de confiance/).first()).toBeVisible();
 

@@ -4,7 +4,7 @@ import { ApiError } from "../api/client";
 import { useAuth } from "../api/hooks";
 import { Button } from "../components/Button";
 import { Card } from "../components/Card";
-import { Chaty } from "../components/Chaty";
+import { Kotty } from "../components/Kotty";
 
 const fieldClass = "min-h-12 w-full rounded-2xl border-2 border-encre/15 bg-white px-3";
 
@@ -38,7 +38,7 @@ export default function Connexion() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center gap-5 px-4 py-8">
-      <Chaty mood="wave" size={120} />
+      <Kotty mood="wave" size={120} />
       <div className="text-center">
         <h1 className="text-3xl font-bold">{t("auth.title")}</h1>
         <p className="mt-2">{t("auth.subtitle")}</p>

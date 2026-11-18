@@ -20,7 +20,6 @@ def child_payload(**overrides: object) -> dict:
         "birth_date": birth_date_for(9),
         "sex": "fille",
         "grade": "4e_annee",
-        "lang": "fr",
         "caution_level": "standard",
         "interests": ["espace", "animaux"],
         "needs": ["dyslexie"],
@@ -64,13 +63,13 @@ def test_update_and_delete(client: TestClient, auth: dict) -> None:
 
     res = client.patch(
         f"/api/children/{child_id}",
-        json={"birth_date": birth_date_for(12), "needs": [], "lang": "ar"},
+        json={"birth_date": birth_date_for(12), "needs": []},
         headers=auth,
     )
     assert res.status_code == 200
     assert res.json()["age"] == 12
     assert res.json()["needs"] == []
-    assert res.json()["lang"] == "ar"
+    assert "lang" not in res.json()
     assert res.json()["first_name"] == "Yasmine"
 
     assert client.delete(f"/api/children/{child_id}", headers=auth).status_code == 204

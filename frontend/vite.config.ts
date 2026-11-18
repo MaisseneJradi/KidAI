@@ -18,9 +18,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["icon.svg"],
       manifest: {
-        name: "KidAI — Chaty",
+        name: "KidAI — Kotty",
         short_name: "KidAI",
-        description: "Pose tes questions à Chaty, ton assistant curieux et bienveillant.",
+        description: "Pose tes questions à Kotty, ton assistant curieux et bienveillant.",
         lang: "fr",
         start_url: "/",
         display: "standalone",

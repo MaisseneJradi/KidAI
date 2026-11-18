@@ -19,6 +19,16 @@ describe("espace parent", () => {
     expect(useAppStore.getState().token).toBe("test-token");
   });
 
+  it("ne demande pas la langue de l'enfant", async () => {
+    const user = userEvent.setup();
+    renderApp("/parent");
+    await typePin("1234");
+    await user.click(await screen.findByRole("button", { name: /Ajouter un enfant/ }));
+
+    expect(screen.getByLabelText("Prénom")).toBeInTheDocument();
+    expect(screen.queryByLabelText("Langue")).toBeNull();
+  });
+
   it("ajoute un enfant avec date de naissance, sexe, intérêts et besoins", async () => {
     const user = userEvent.setup();
     renderApp("/parent");

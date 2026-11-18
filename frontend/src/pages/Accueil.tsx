@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { useChildren } from "../api/hooks";
 import { Avatar } from "../components/Avatar";
-import { Chaty } from "../components/Chaty";
+import { Kotty } from "../components/Kotty";
 import { useAppStore } from "../store/useAppStore";
 
 export default function Accueil() {
@@ -15,7 +15,7 @@ export default function Accueil() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-3xl flex-col items-center gap-6 px-4 py-8">
-      <Chaty mood="wave" size={150} />
+      <Kotty mood="wave" size={150} />
       <div className="text-center">
         <h1 className="text-4xl font-bold">{t("home.title")}</h1>
         <p className="mt-2 text-lg">{t("home.subtitle")}</p>
@@ -35,7 +35,7 @@ export default function Accueil() {
             <button
               type="button"
               onClick={() => {
-                selectChild(child.id, child.lang);
+                selectChild(child.id);
                 navigate("/chat");
               }}
               className="flex w-full flex-col items-center gap-2 rounded-3xl bg-white p-5 shadow-[0_6px_0_rgba(36,50,74,0.08)] transition hover:-translate-y-1 active:translate-y-0"

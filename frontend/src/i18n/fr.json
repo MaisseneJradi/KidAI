@@ -1,7 +1,7 @@
 {
   "app": { "name": "KidAI" },
   "common": { "loading": "Chargement…", "back": "Retour" },
-  "chaty": { "label": "Chaty, le petit hibou-robot" },
+  "kotty": { "label": "Kotty, le petit hibou-robot" },
   "languages": { "fr": "Français", "ar": "العربية" },
   "age_one": "{{count}} an",
   "age_other": "{{count}} ans",
@@ -18,7 +18,7 @@
   },
   "home": {
     "title": "Qui es-tu ?",
-    "subtitle": "Choisis ton profil pour parler avec Chaty",
+    "subtitle": "Choisis ton profil pour parler avec Kotty",
     "empty": "Aucun profil pour l'instant. Demande à un parent d'en créer un.",
     "parent": "Espace parent"
   },
@@ -31,17 +31,17 @@
     "switchProfile": "Changer de profil"
   },
   "chat": {
-    "greeting": "Bonjour {{name}} ! Je suis Chaty, une intelligence artificielle. Pose-moi toutes tes questions !",
+    "greeting": "Bonjour {{name}} ! Je suis Kotty, une intelligence artificielle. Pose-moi toutes tes questions !",
     "placeholder": "Écris ta question…",
-    "inputLabel": "Ta question pour Chaty",
+    "inputLabel": "Ta question pour Kotty",
     "send": "Envoyer",
-    "thinking": "Chaty réfléchit…",
+    "thinking": "Kotty réfléchit…",
     "simpler": "Explique plus simplement",
-    "imageLoading": "Chaty dessine…",
-    "imageAlt": "Illustration de la réponse de Chaty",
+    "imageLoading": "Kotty dessine…",
+    "imageAlt": "Illustration de la réponse de Kotty",
     "source": "D'après ta leçon : {{book}} — {{chapter}}",
     "gentleHint": "Tu peux montrer ce message à un adulte de confiance.",
-    "error": "Oups, Chaty n'a pas pu répondre. Réessaie !",
+    "error": "Oups, Kotty n'a pas pu répondre. Réessaie !",
     "suggestionsTitle": "Idées de questions",
     "suggestions": [
       "Pourquoi le ciel est bleu ?",
@@ -60,7 +60,7 @@
   },
   "discoveries": {
     "title": "Mes découvertes",
-    "empty": "Pose ta première question à Chaty pour remplir ton carnet !"
+    "empty": "Pose ta première question à Kotty pour remplir ton carnet !"
   },
   "badges": {
     "title": "Mes badges",
@@ -82,7 +82,7 @@
     "title": "Réglages",
     "language": "Langue",
     "sounds": "Sons",
-    "soundsHint": "Un petit son quand Chaty répond",
+    "soundsHint": "Un petit son quand Kotty répond",
     "theme": "Thème",
     "themes": {
       "auto": "Selon l'âge",
@@ -130,11 +130,11 @@
       "garcon": "Garçon",
       "non_precise": "Ne pas préciser"
     },
-    "sexHelp": "Permet à Chaty d'accorder correctement ses phrases (surtout en arabe).",
+    "sexHelp": "Permet à Kotty d'accorder correctement ses phrases (surtout en arabe).",
     "interests": "Centres d'intérêt",
     "interestsHelp": "Pour proposer des idées de questions qui lui plaisent.",
     "needs": "Besoins d'adaptation",
-    "needsHelp": "L'affichage et les réponses de Chaty s'adaptent. Ces informations sont chiffrées et ne sont jamais montrées à l'enfant.",
+    "needsHelp": "L'affichage et les réponses de Kotty s'adaptent. Ces informations sont chiffrées et ne sont jamais montrées à l'enfant.",
     "needsList": {
       "dyslexie": { "name": "Dyslexie", "desc": "texte plus espacé, réponses plus courtes" },
       "deficience_visuelle": { "name": "Déficience visuelle", "desc": "texte plus grand" },
@@ -153,7 +153,7 @@
     "lock": "Verrouiller",
     "alerts": "Alertes",
     "noAlerts": "Aucune alerte.",
-    "alertText": "{{name}} a demandé : « {{question}} ». Chaty lui a conseillé d'en parler à un adulte.",
+    "alertText": "{{name}} a demandé : « {{question}} ». Kotty lui a conseillé d'en parler à un adulte.",
     "children": "Profils des enfants",
     "addChild": "Ajouter un enfant",
     "edit": "Modifier",
@@ -164,7 +164,6 @@
     "firstName": "Prénom",
     "age": "Âge",
     "grade": "Niveau scolaire",
-    "lang": "Langue",
     "avatar": "Avatar",
     "caution": "Niveau de prudence",
     "cautionLevels": { "standard": "Standard", "renforce": "Renforcé" },
@@ -172,7 +171,7 @@
     "child": "Enfant",
     "totalQuestions": "Questions posées",
     "byTopic": "Sujets",
-    "byAction": "Réactions de Chaty",
+    "byAction": "Réactions de Kotty",
     "actions": {
       "ALLOW": "Réponse normale",
       "REWRITE": "Réponse adoucie",

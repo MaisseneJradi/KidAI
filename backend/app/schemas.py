@@ -13,10 +13,9 @@ from pydantic import (
 from app.core.age import MAX_AGE, MIN_AGE, age_on
 
 Sex = Literal["fille", "garcon", "non_precise"]
-Lang = Literal["fr", "ar"]
 CautionLevel = Literal["standard", "renforce"]
 Interest = Literal["sciences", "espace", "animaux", "histoire", "corps", "sport", "musique", "art"]
-# Besoins d'adaptation : seulement ce que l'interface et Chaty savent prendre en compte.
+# Besoins d'adaptation : seulement ce que l'interface et Kotty savent prendre en compte.
 Need = Literal["dyslexie", "deficience_visuelle", "attention", "deficience_auditive"]
 
 FirstName = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=30)]
@@ -65,7 +64,6 @@ class ChildIn(BaseModel):
     birth_date: BirthDate
     sex: Sex
     grade: Grade
-    lang: Lang
     caution_level: CautionLevel = "standard"
     interests: Interests = []
     needs: Needs = []
@@ -77,7 +75,6 @@ class ChildPatch(BaseModel):
     birth_date: BirthDate | None = None
     sex: Sex | None = None
     grade: Grade | None = None
-    lang: Lang | None = None
     caution_level: CautionLevel | None = None
     interests: Interests | None = None
     needs: Needs | None = None
@@ -93,7 +90,6 @@ class ChildOut(BaseModel):
     age: int
     sex: Sex
     grade: str
-    lang: Lang
     caution_level: CautionLevel
     interests: list[Interest]
     needs: list[Need]
