@@ -114,8 +114,10 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python -m pip install -r data\requirements.txt
 ```
 
-Manuels du CNP, cycle de base (élève + guide de l'enseignant), usage académique uniquement,
-jamais commités (`data/raw/` est ignoré par Git) :
+Manuels du CNP, cycle de base (élève + guide de l'enseignant), usage académique uniquement.
+Les PDF ne sont pas commités (`data/raw/` est ignoré par Git) ; le texte extrait et l'index
+du RAG sont dans Git LFS (dépôt privé), voir [rag/README.md](rag/README.md). Pour retélécharger
+les PDF :
 
 ```powershell
 .\.venv\Scripts\python data\download_cnp.py --dry-run      # inventaire sans téléchargement

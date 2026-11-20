@@ -5,9 +5,13 @@ Usage académique uniquement.
 - **Dans Git** (un `git pull` suffit) : `processed/` (dataset final, traductions, synthétiques,
   statistiques), `cache/` (réponses du LLM : des jours de calcul) et `annotation/` (travail
   humain de l'équipe). DVC garde leurs empreintes dans `dvc.lock`.
-- **Hors Git** : `raw/` (retéléchargé par `python data\download.py`), et, parce qu'ils sont sous
-  droits et ne doivent pas être redistribués, les manuels CNP (`raw/cnp/`, `processed/cnp/`) et
-  l'index `qdrant/` (voir `rag/README.md`).
+- **Dans Git LFS** (`git lfs install` une fois, puis `git pull`) : les données du RAG,
+  `processed/cnp/` (texte extrait des manuels CNP) et `qdrant/` (index). Elles sont sous droits :
+  **le dépôt doit rester privé**. Chaque réindexation ajoute ~240 Mo au quota LFS du propriétaire
+  (10 Gio de stockage, 10 Gio de téléchargement par mois, pull des collaborateurs compris) :
+  ne les recommiter que pour une vraie nouvelle version.
+- **Hors Git** : `raw/`, PDF des manuels compris (retéléchargés par `python data\download.py` et
+  `python data\download_cnp.py`).
 
 Après un `git pull`, le dataset est utilisable tel quel. Pour relancer le pipeline, il faut
 d'abord les données brutes (`python data\download.py`) ; grâce au cache, `dvc repro` ne refait

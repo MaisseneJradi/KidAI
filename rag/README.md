@@ -3,8 +3,10 @@
 Index vectoriel des manuels scolaires tunisiens (cycle de base, élève + guide de l'enseignant),
 pour ancrer les réponses de Kotty dans le programme (cahier des charges, section 12).
 
-> Usage académique uniquement. Les PDF (`data/raw/`), le texte extrait (`data/processed/cnp/`) et
-> l'index (`data/qdrant/`) ne sont **jamais** commités.
+> Usage académique uniquement, **dépôt privé obligatoire**. Le texte extrait
+> (`data/processed/cnp/`) et l'index (`data/qdrant/`) sont dans Git LFS : après `git lfs install`
+> puis `git pull`, `rag.search` fonctionne sans refaire l'ingestion. Les PDF (`data/raw/cnp/`)
+> restent hors Git : il ne faut les télécharger que pour reconstruire l'index.
 
 ## Pipeline
 
