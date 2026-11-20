@@ -22,6 +22,8 @@ Spécification complète : docs/CAHIER_DES_CHARGES.md — la lire avant toute t�
   hibou-robot original. Utiliser « Kotty » partout (code, textes, prompts système de l'Annexe C).
 - **Pas de langue dans le profil enfant** (ni `children.lang`, section 15, ni formulaire parent) :
   la langue se choisit dans Réglages et s'applique à l'appareil.
+- **Données du RAG dans Git LFS** (`data/processed/cnp/`, `data/qdrant/`) : le dépôt GitHub doit
+  rester **privé** (manuels CNP sous droits). Les PDF (`data/raw/cnp/`) restent hors Git.
 - **PostgreSQL 17** installé en local (service Windows `postgresql-x64-17`, port 5432),
   base `kidai`, utilisateur `kidai`. URL dans `.env` (`DATABASE_URL`).
 
