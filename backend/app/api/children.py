@@ -1,17 +1,10 @@
-from fastapi import APIRouter, HTTPException, Response, status
+from fastapi import APIRouter, Response, status
 
-from app.api.deps import CurrentParent, DbSession
-from app.db.models import Child, Parent
+from app.api.deps import CurrentParent, DbSession, owned_child
+from app.db.models import Child
 from app.schemas import ChildIn, ChildOut, ChildPatch
 
 router = APIRouter(prefix="/api/children", tags=["children"])
-
-
-def _owned_child(db: DbSession, parent: Parent, child_id: str) -> Child:
-    child = db.get(Child, child_id)
-    if child is None or child.parent_id != parent.id:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "Profil introuvable")
-    return child
 
 
 @router.get("")
@@ -33,7 +26,7 @@ def create_child(payload: ChildIn, parent: CurrentParent, db: DbSession) -> Chil
 def update_child(
     child_id: str, payload: ChildPatch, parent: CurrentParent, db: DbSession
 ) -> ChildOut:
-    child = _owned_child(db, parent, child_id)
+    child = owned_child(db, parent, child_id)
     for field, value in payload.model_dump(exclude_unset=True, exclude_none=True).items():
         setattr(child, field, value.isoformat() if field == "birth_date" else value)
     db.commit()
@@ -42,6 +35,6 @@ def update_child(
 
 @router.delete("/{child_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_child(child_id: str, parent: CurrentParent, db: DbSession) -> Response:
-    db.delete(_owned_child(db, parent, child_id))
+    db.delete(owned_child(db, parent, child_id))
     db.commit()
     return Response(status_code=status.HTTP_204_NO_CONTENT)

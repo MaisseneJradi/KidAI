@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 from typing import Annotated, Literal
 
 from pydantic import (
@@ -11,6 +11,7 @@ from pydantic import (
 )
 
 from app.core.age import MAX_AGE, MIN_AGE, age_on
+from app.services.safety import RiskLevel
 
 Sex = Literal["fille", "garcon", "non_precise"]
 CautionLevel = Literal["standard", "renforce"]
@@ -93,3 +94,53 @@ class ChildOut(BaseModel):
     caution_level: CautionLevel
     interests: list[Interest]
     needs: list[Need]
+
+
+Lang = Literal["fr", "ar"]
+Action = Literal["ALLOW", "REWRITE", "REDIRECT", "ASK_ADULT", "BLOCK"]
+ImageStatus = Literal["pending", "ready", "none", "failed"]
+Question = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=500)]
+
+
+class MessageIn(BaseModel):
+    question: Question
+    lang: Lang = "fr"
+
+
+class RagSource(BaseModel):
+    book: str
+    chapter: str
+    page: int
+
+
+# « skipped » : question bloquée, la réponse est un texte sûr pré-écrit (pas de génération).
+OutputCheck = Literal["pass", "fail", "skipped"]
+
+
+class Safety(BaseModel):
+    input_risk: RiskLevel
+    output_check: OutputCheck
+
+
+class MessageOut(BaseModel):
+    """Contrat de la section 14."""
+
+    message_id: str
+    text: str
+    action: Action
+    lang: Lang
+    rag_source: RagSource | None
+    image_status: ImageStatus
+    safety: Safety
+
+
+class AlertOut(BaseModel):
+    """Alerte ASK_ADULT montrée au parent (contrat de GET /api/parent/alerts)."""
+
+    id: str
+    child_id: str
+    message_id: str
+    type: Literal["ASK_ADULT"]
+    question: str
+    seen: bool
+    created_at: datetime
