@@ -105,6 +105,12 @@ centres d'intérêt et besoins d'adaptation. Ces données sont enregistrées dan
 date de naissance et les besoins y sont chiffrés.
 `http://localhost:8000/health` renvoie `{"status":"ok","database":"ok"}`.
 
+Les réponses de Kotty viennent d'Ollama (`qwen3:4b-instruct`, une fois :
+`ollama pull qwen3:4b-instruct`).
+Le prompt système (Annexe C, action ALLOW) s'adapte à l'âge de l'enfant : réponses très
+courtes et imagées pour les 6–8 ans, plus détaillées avec le vrai vocabulaire pour les 12–14 ans.
+Si Ollama est arrêté, l'API renvoie une erreur 503 et Kotty affiche « se repose un instant ».
+
 ## Données
 
 Environnement Python dédié aux scripts de données (`.venv` à la racine) :

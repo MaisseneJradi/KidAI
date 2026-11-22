@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import download_cnp as cnp  # noqa: E402
@@ -60,3 +62,14 @@ def test_is_valid_checks_size_and_hash(tmp_path, monkeypatch) -> None:
     assert not cnp.is_valid(entry)
     assert not cnp.is_valid({**entry, "status": "failed"})
     assert not cnp.is_valid(None)
+
+
+def test_search_combos_can_be_limited_to_one_subject() -> None:
+    combos = cnp.search_combos(["4", "5"], ["03"])
+    assert {(n, m) for n, m, _ in combos} == {("4", "03"), ("5", "03")}
+    assert len(combos) == 2 * len(cnp.CATEGORIES)
+
+
+def test_matiere_option_rejects_unknown_codes() -> None:
+    with pytest.raises(SystemExit):
+        cnp.main(["--matiere", "99", "--dry-run"])

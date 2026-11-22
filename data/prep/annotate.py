@@ -23,7 +23,10 @@ SHEET_COLUMNS = ["id", "age", "grade", "lang", "question", "question_en", "actio
 
 
 def read_sheet(path: Path) -> pd.DataFrame:
-    return pd.read_csv(path, dtype=str, keep_default_na=False, encoding="utf-8-sig")
+    # Séparateur détecté : Excel en français enregistre les CSV avec « ; » au lieu de « , ».
+    return pd.read_csv(
+        path, dtype=str, keep_default_na=False, encoding="utf-8-sig", sep=None, engine="python"
+    )
 
 
 def write_sheet(df: pd.DataFrame, path: Path) -> None:

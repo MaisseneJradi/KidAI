@@ -8,6 +8,8 @@
   --color-menthe: #3dd6a3;
   --color-corail: #ff7a6b;
   --color-creme: #fff8ec;
+  /* Bulle des messages de l'enfant (contraste avec encre ≈ 9:1, NF-04). */
+  --color-rose: #f9c9dc;
   --color-encre: #24324a;
   --font-sans: "Fredoka", "Baloo Bhaijaan 2", system-ui, sans-serif;
 }

@@ -17,6 +17,9 @@ from sqlalchemy.pool import StaticPool  # noqa: E402
 from app.db.models import Base  # noqa: E402
 from app.db.session import get_db  # noqa: E402
 from app.main import app  # noqa: E402
+from app.services.llm import get_llm  # noqa: E402
+from app.services.safety import get_guard  # noqa: E402
+from tests.fake_ollama import FakeOllama  # noqa: E402
 
 
 @pytest.fixture
@@ -32,8 +35,16 @@ def db() -> Iterator[Session]:
 
 
 @pytest.fixture
-def client(db: Session) -> Iterator[TestClient]:
+def ollama() -> FakeOllama:
+    return FakeOllama()
+
+
+@pytest.fixture
+def client(db: Session, ollama: FakeOllama) -> Iterator[TestClient]:
     app.dependency_overrides[get_db] = lambda: db
+    # Jamais de vrai Ollama dans les tests.
+    app.dependency_overrides[get_llm] = ollama.llm
+    app.dependency_overrides[get_guard] = ollama.guard
     with TestClient(app) as c:
         yield c
     app.dependency_overrides.clear()
