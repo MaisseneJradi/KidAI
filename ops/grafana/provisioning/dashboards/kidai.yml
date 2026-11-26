@@ -1,0 +1,11 @@
+# Tableaux de bord lus dans ops/grafana/dashboards (chemin passé par scripts\monitoring.ps1).
+# Ils sont versionnés dans Git : modifier le JSON, pas l'interface (les changements y sont perdus).
+apiVersion: 1
+
+providers:
+  - name: KidAI
+    folder: KidAI
+    type: file
+    allowUiUpdates: false
+    options:
+      path: ${KIDAI_DASHBOARDS}

@@ -24,6 +24,9 @@ Spécification complète : docs/CAHIER_DES_CHARGES.md — la lire avant toute t�
   la langue se choisit dans Réglages et s'applique à l'appareil.
 - **Données du RAG dans Git LFS** (`data/processed/cnp/`, `data/qdrant/`) : le dépôt GitHub doit
   rester **privé** (manuels CNP sous droits). Les PDF (`data/raw/cnp/`) restent hors Git.
+- **CI : GitHub Actions** (`.github/workflows/ci.yml`) au lieu de GitLab CI : le dépôt est sur GitHub.
+- **Monitoring sans Docker** : Prometheus et Grafana portables, téléchargés et lancés par
+  `scripts\monitoring.ps1` ; configuration et tableaux de bord dans `ops/`.
 - **PostgreSQL 17** installé en local (service Windows `postgresql-x64-17`, port 5432),
   base `kidai`, utilisateur `kidai`. URL dans `.env` (`DATABASE_URL`).
 
@@ -40,6 +43,7 @@ RL : Gymnasium + Stable-Baselines3 ; MLOps : DVC, MLflow, GitLab CI, Prometheus,
 - Frontend : cd frontend ; npm run dev   (http://localhost:5173)
 - Tests backend : cd backend ; .\.venv\Scripts\python -m pytest
 - Tests frontend : cd frontend ; npm test ; npm run test:e2e
+- Monitoring : powershell -ExecutionPolicy Bypass -File scripts\monitoring.ps1 [-ApiPort 8010]   (Prometheus :9090, Grafana :3000 ; métriques API sur /metrics)
 - Frontend en mode démo (MSW, sans backend) par défaut ; VITE_USE_MOCKS=false pour l'API réelle
 - RAG CNP (venv racine .venv) : .\.venv\Scripts\python -m rag.ingest ; tests : -m pytest rag\tests
 - Pipeline données/entraînement : .\.venv\Scripts\Activate.ps1 ; dvc repro (paramètres : params.yaml ; venv activé obligatoire, les étapes appellent « python »)

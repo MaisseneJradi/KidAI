@@ -33,3 +33,6 @@ mlartifacts/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Outils de monitoring téléchargés par scripts/monitoring.ps1 (Prometheus, Grafana) et leurs données
+.tools/
