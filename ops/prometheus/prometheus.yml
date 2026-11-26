@@ -1,0 +1,10 @@
+# Prometheus local (scripts\monitoring.ps1) : lit les métriques de l'API KidAI toutes les 15 s.
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: kidai-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["localhost:8000"]

@@ -163,6 +163,26 @@ voir [rag/README.md](rag/README.md).
 .\.venv\Scripts\python -m rag.search "كيف أحمي عيني؟" --niveau 5       # chercher
 ```
 
+## Monitoring (Prometheus + Grafana, sans Docker)
+
+L'API expose ses métriques sur `http://localhost:8000/metrics` (latence et nombre de requêtes
+par route). Avec l'API lancée :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\monitoring.ps1              # API sur :8000
+powershell -ExecutionPolicy Bypass -File scripts\monitoring.ps1 -ApiPort 8010 # autre port
+```
+
+Au premier lancement, le script télécharge Prometheus 3.5 et Grafana 12.1 en version portable
+dans `.tools/` (ignoré par Git), en vérifiant leur empreinte SHA-256. Puis :
+
+- Prometheus : http://localhost:9090/targets (la cible `kidai-api` doit être **UP**) ;
+- Grafana : http://localhost:3000 (lecture sans compte ; `admin` / `admin` pour modifier),
+  tableau de bord « KidAI — API : latence et trafic » (cible : latence P90 < 5 s).
+
+Le tableau de bord est versionné dans `ops/grafana/dashboards/` : on modifie le JSON, pas
+l'interface de Grafana (les changements faits dans l'interface sont perdus).
+
 ## Tests et qualité
 
 ```powershell
@@ -172,6 +192,11 @@ cd frontend; npm test; npm run test:e2e; npm run lint; npm run format:check
 
 Pre-commit (ruff, black, eslint, prettier) vérifie le code à chaque commit. S'il corrige un
 fichier, le commit s'arrête : refaire `git add .` puis `git commit`.
+
+La CI GitHub Actions ([.github/workflows/ci.yml](.github/workflows/ci.yml)) relance tout cela
+à chaque push sur `main` et à chaque Pull Request : backend (ruff, black, pytest), frontend
+(eslint, prettier, build, Vitest, Playwright) et données / RAG (ruff, pytest). Une Pull Request
+dont la CI est rouge ne doit pas être fusionnée.
 
 ## Contribuer
 
@@ -193,7 +218,9 @@ les migrations, relancer `scripts\setup.ps1`.
 ## Structure
 
 ```
-scripts/    setup.ps1 (installation), dev.ps1 (lancement)
+scripts/    setup.ps1 (installation), dev.ps1 (lancement), monitoring.ps1 (Prometheus + Grafana)
+ops/        configuration Prometheus, Grafana (sources, tableaux de bord)
+.github/    CI GitHub Actions
 rag/        RAG sur les manuels CNP (extract, chunk, index, search)
 backend/    FastAPI (app/, tests/)
 frontend/   React + Vite + TS + Tailwind (src/, tests/)
