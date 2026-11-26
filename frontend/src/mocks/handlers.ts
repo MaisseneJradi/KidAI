@@ -88,7 +88,7 @@ function toResponse(m: StoredMessage, text: string): MessageResponse {
     image_status: withImage ? "pending" : "none",
     safety: {
       input_risk: m.action === "ALLOW" ? "safe" : m.action === "BLOCK" ? "unsafe" : "controversial",
-      output_check: "pass",
+      output_check: m.action === "BLOCK" ? "skipped" : "pass",
     },
   };
 }

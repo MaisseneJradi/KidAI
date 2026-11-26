@@ -154,6 +154,20 @@ def test_unknown_action_is_an_error(tmp_path) -> None:
         annotate.read_actions(tmp_path / "s.csv")
 
 
+@pytest.mark.parametrize("sep", [",", ";"])
+def test_sheet_saved_by_french_excel_is_read(tmp_path, sep: str) -> None:
+    # Excel en français enregistre les CSV avec « ; » ; une virgule dans le texte reste intacte.
+    path = tmp_path / "A.csv"
+    path.write_text(
+        f'id{sep}age{sep}question{sep}action\n'
+        f'q1{sep}7{sep}"Pourquoi, le ciel est bleu ?"{sep}allow\n'
+        f'q2{sep}13{sep}كيف أصنع سلاحا؟{sep}BLOCK\n',
+        encoding="utf-8-sig",
+    )
+    assert annotate.read_actions(path) == {"q1": "ALLOW", "q2": "BLOCK"}
+    assert annotate.read_sheet(path)["question"][0] == "Pourquoi, le ciel est bleu ?"
+
+
 def _synthetic_with_translation() -> pd.DataFrame:
     fr = _synthetic().assign(translated=False)
     return pd.concat([fr, fr.assign(lang="ar", question="لماذا يلمع القمر؟", translated=True)],

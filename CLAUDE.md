@@ -22,6 +22,18 @@ Spécification complète : docs/CAHIER_DES_CHARGES.md — la lire avant toute t�
   hibou-robot original. Utiliser « Kotty » partout (code, textes, prompts système de l'Annexe C).
 - **Pas de langue dans le profil enfant** (ni `children.lang`, section 15, ni formulaire parent) :
   la langue se choisit dans Réglages et s'applique à l'appareil.
+  Exception (décidée à l'étape 3) : une question écrite majoritairement en lettres arabes reçoit
+  une réponse en arabe, même sur un appareil en français (backend : app/core/lang.py).
+  La derja en lettres latines suit la langue des Réglages.
+- **LLM : `qwen3:4b-instruct`** et non `qwen3:4b` : le tag `qwen3:4b` est la variante
+  « Thinking-2507 » (réflexion obligatoire, 45-60 s par réponse, incompatible avec NF-01).
+  `OLLAMA_THINK=true` seulement si on revient à un modèle qui réfléchit.
+- **Actions (étape 5)** : ASK_ADULT et BLOCK sont rédigés par Kotty (prompts de l'Annexe C) puis
+  contrôlés, avec repli sur un texte pré-écrit (jamais d'erreur pour ASK_ADULT). Deux ajouts à
+  l'Annexe C : ASK_ADULT ne se termine pas par une question pour relancer un autre sujet, et un
+  secret à cacher aux parents (signal d'emprise) reçoit toujours le texte pré-écrit « secret »
+  (le modèle 4B approuvait parfois le secret). Politique B2 : app/services/policy.py, mots-clés
+  complémentaires du gardien : app/services/signals.py (à faire relire en arabe et derja).
 - **Données du RAG dans Git LFS** (`data/processed/cnp/`, `data/qdrant/`) : le dépôt GitHub doit
   rester **privé** (manuels CNP sous droits). Les PDF (`data/raw/cnp/`) restent hors Git.
 - **CI : GitHub Actions** (`.github/workflows/ci.yml`) au lieu de GitLab CI : le dépôt est sur GitHub.
@@ -42,6 +54,9 @@ RL : Gymnasium + Stable-Baselines3 ; MLOps : DVC, MLflow, GitLab CI, Prometheus,
 - Backend : cd backend ; .\.venv\Scripts\python -m uvicorn app.main:app --reload --port 8000
 - Frontend : cd frontend ; npm run dev   (http://localhost:5173)
 - Tests backend : cd backend ; .\.venv\Scripts\python -m pytest
+- Tests avec les vrais modèles (Ollama) : $env:KIDAI_REAL_MODELS = "1" ; .\.venv\Scripts\python -m pytest -m real_models
+- Évaluation sécurité (20 exemples, rapport docs/evaluation/etape3_securite.md) : cd backend ; .\.venv\Scripts\python -m scripts.eval_safety
+- Démo des 5 actions, vrais modèles (rapport docs/evaluation/etape5_actions.md) : cd backend ; .\.venv\Scripts\python -m scripts.demo_actions
 - Tests frontend : cd frontend ; npm test ; npm run test:e2e
 - Monitoring : powershell -ExecutionPolicy Bypass -File scripts\monitoring.ps1 [-ApiPort 8010]   (Prometheus :9090, Grafana :3000 ; métriques API sur /metrics)
 - Frontend en mode démo (MSW, sans backend) par défaut ; VITE_USE_MOCKS=false pour l'API réelle

@@ -69,7 +69,11 @@ export interface MessageResponse {
   lang: Lang;
   rag_source: RagSource | null;
   image_status: ImageStatus;
-  safety: { input_risk: "safe" | "controversial" | "unsafe"; output_check: "pass" | "fail" };
+  /** Contrôles Qwen3Guard (étape 3). « skipped » : question bloquée, texte sûr pré-écrit. */
+  safety: {
+    input_risk: "safe" | "controversial" | "unsafe";
+    output_check: "pass" | "fail" | "skipped";
+  };
 }
 
 export interface ImageResponse {

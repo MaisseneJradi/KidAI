@@ -6,7 +6,7 @@ type From = "kotty" | "child" | "gentle";
 const styles: Record<From, string> = {
   kotty: "bg-white self-start rounded-ss-md",
   gentle: "bg-white self-start rounded-ss-md border-2 border-menthe",
-  child: "bg-ciel self-end rounded-se-md",
+  child: "bg-rose self-end rounded-se-md",
 };
 
 /** Bulle de dialogue qui « rebondit » en apparaissant. */

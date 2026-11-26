@@ -7,6 +7,7 @@ redistribués (cahier des charges, section 9) ; data/raw/ n'est jamais commité.
 Politesse : une seule requête à la fois, pause de 3 s entre chaque requête (recherche ou PDF).
 
 Exemples :
+    .venv\\Scripts\\python data\\download_cnp.py --niveau 4 --niveau 5 --niveau 6 --matiere 03
     .venv\\Scripts\\python data\\download_cnp.py --dry-run              # inventaire, rien n'est téléchargé
     .venv\\Scripts\\python data\\download_cnp.py --niveau 1             # un seul niveau
     .venv\\Scripts\\python data\\download_cnp.py                        # tout le cycle de base
@@ -229,9 +230,14 @@ def with_retries(action, what: str):
     raise AssertionError("inaccessible")
 
 
-def discover(client: Client, niveaux: list[str]) -> list[Document]:
+def search_combos(niveaux: list[str], matieres: list[str]) -> list[tuple[str, str, str]]:
+    """(niveau, matière, catégorie) à interroger, dans un ordre stable."""
+    return [(n, m, c) for n in niveaux for m in matieres for c in CATEGORIES]
+
+
+def discover(client: Client, niveaux: list[str], matieres: list[str] | None = None) -> list[Document]:
     docs: dict[str, Document] = {}
-    combos = [(n, m, c) for n in niveaux for m in MATIERES for c in CATEGORIES]
+    combos = search_combos(niveaux, matieres or list(MATIERES))
     for i, (niveau, matiere, cat) in enumerate(combos, 1):
         form = {"CYCLE": CYCLE[0], "CLASSE": niveau, "MATIERE": matiere, "type": cat}
         what = f"recherche niveau={niveau} matiere={matiere} type={cat}"
@@ -371,14 +377,21 @@ def main(argv: list[str] | None = None) -> int:
         choices=list(NIVEAUX),
         help="niveau à traiter (0 = préparatoire, 1 à 9) ; répétable. Par défaut : tous",
     )
+    parser.add_argument(
+        "--matiere",
+        action="append",
+        choices=list(MATIERES),
+        help="code matière (ex. 03 = éveil scientifique) ; répétable. Par défaut : toutes",
+    )
     args = parser.parse_args(argv)
     niveaux = args.niveau or list(NIVEAUX)
+    matieres = args.matiere or list(MATIERES)
     if hasattr(sys.stdout, "reconfigure"):  # titres arabes dans la console Windows
         sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
     client = Client()
     print(f"Recherche des PDF — cycle {CYCLE[1]}, niveaux {', '.join(niveaux)}")
-    docs = discover(client, niveaux)
+    docs = discover(client, niveaux, matieres)
     print_inventory(docs)
     if args.dry_run:
         return 0

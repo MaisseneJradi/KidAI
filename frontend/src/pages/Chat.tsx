@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
+import { ApiError } from "../api/client";
 import { useChildren, useImage, useSendMessage, useSimplify } from "../api/hooks";
 import { ANSWER_ACTIONS, type MessageResponse } from "../api/types";
 import { Bubble } from "../components/Bubble";
@@ -17,7 +18,8 @@ interface Exchange {
 function moodFor(pending: boolean, last?: MessageResponse): KottyMood {
   if (pending) return "think";
   if (!last) return "wave";
-  return ANSWER_ACTIONS.includes(last.action) ? "wonder" : "reassure";
+  // Étape 5 : réaction de Kotty selon l'action (douceur pour les sujets délicats).
+  return last.action === "ALLOW" || last.action === "REDIRECT" ? "wonder" : "reassure";
 }
 
 function Illustration({ childId, messageId }: { childId: string; messageId: string }) {
@@ -75,17 +77,24 @@ export default function Chat() {
   const simplify = useSimplify(childId);
   const [question, setQuestion] = useState("");
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
+  /** Question envoyée dont la réponse n'est pas encore arrivée (ou a échoué) : affichée tout de suite. */
+  const [waiting, setWaiting] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
   const pending = send.isPending || simplify.isPending;
+  const failure = send.error ?? simplify.error;
+  // 503 : le modèle (Ollama) est indisponible côté serveur, ce n'est pas la faute de l'enfant.
+  const errorKey =
+    failure instanceof ApiError && failure.status === 503 ? "chat.unavailable" : "chat.error";
   const last = exchanges.at(-1)?.response;
   const suggestions = t("chat.suggestions", { returnObjects: true }) as string[];
 
   useEffect(() => {
     endRef.current?.scrollIntoView?.({ behavior: "smooth", block: "end" });
-  }, [exchanges.length, pending]);
+  }, [exchanges.length, pending, waiting]);
 
   const addExchange = (exchange: Exchange) => {
+    setWaiting(null);
     setExchanges((prev) => [...prev, exchange]);
     if (sounds) playPop();
   };
@@ -94,6 +103,9 @@ export default function Chat() {
     const q = text.trim();
     if (!q || pending) return;
     setQuestion("");
+    setWaiting(q);
+    // Une nouvelle demande efface l'erreur de la précédente, quel que soit son type.
+    simplify.reset();
     send.mutate(
       { question: q, lang },
       { onSuccess: (response) => addExchange({ question: q, response }) },
@@ -105,10 +117,13 @@ export default function Chat() {
     ask(question);
   };
 
-  const askSimpler = (ex: Exchange) =>
+  const askSimpler = (ex: Exchange) => {
+    setWaiting(t("chat.simpler"));
+    send.reset();
     simplify.mutate(ex.response.message_id, {
       onSuccess: (response) => addExchange({ question: t("chat.simpler"), response }),
     });
+  };
 
   return (
     <div className="flex flex-1 flex-col gap-4">
@@ -124,11 +139,20 @@ export default function Chat() {
           const src = ex.response.rag_source;
           return (
             <div key={`${ex.response.message_id}-${i}`} className="flex flex-col gap-3">
-              <Bubble from="child">{ex.question}</Bubble>
+              <Bubble from="child">
+                <p dir="auto">{ex.question}</p>
+              </Bubble>
               <Bubble from={answered ? "kotty" : "gentle"}>
-                <p>{ex.response.text}</p>
+                {/* La réponse peut être en arabe sur un appareil en français : sens propre. */}
+                <p lang={ex.response.lang} dir={ex.response.lang === "ar" ? "rtl" : "ltr"}>
+                  {ex.response.text}
+                </p>
                 {!answered && (
-                  <p className="mt-2 text-sm font-semibold">💛 {t("chat.gentleHint")}</p>
+                  <p className="mt-2 text-sm font-semibold">
+                    {ex.response.action === "BLOCK"
+                      ? `🌟 ${t("chat.blockHint")}`
+                      : `💛 ${t("chat.gentleHint")}`}
+                  </p>
                 )}
                 {src && (
                   <p className="mt-2 text-sm text-encre/80">
@@ -153,8 +177,13 @@ export default function Chat() {
           );
         })}
 
+        {waiting && (
+          <Bubble from="child">
+            <p dir="auto">{waiting}</p>
+          </Bubble>
+        )}
         {pending && <ThinkingBubble />}
-        {(send.isError || simplify.isError) && <Bubble from="gentle">{t("chat.error")}</Bubble>}
+        {failure && <Bubble from="gentle">{t(errorKey)}</Bubble>}
         <div ref={endRef} />
       </div>
 

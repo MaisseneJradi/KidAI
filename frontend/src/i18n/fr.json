@@ -41,7 +41,9 @@
     "imageAlt": "Illustration de la réponse de Kotty",
     "source": "D'après ta leçon : {{book}} — {{chapter}}",
     "gentleHint": "Tu peux montrer ce message à un adulte de confiance.",
+    "blockHint": "Pose-moi une autre question, j'adore apprendre avec toi !",
     "error": "Oups, Kotty n'a pas pu répondre. Réessaie !",
+    "unavailable": "Kotty se repose un instant. Réessaie dans un moment !",
     "suggestionsTitle": "Idées de questions",
     "suggestions": [
       "Pourquoi le ciel est bleu ?",
